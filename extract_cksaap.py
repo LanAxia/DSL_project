@@ -40,7 +40,7 @@ def cksaap(sequence: list, k: int):
     return encoded
 
 
-df = pd.read_excel(r"1-s2.0-S1074552115002574-mmc2.xlsx")
+df = pd.read_excel("./Data/peptides10.xlsx")
 
 peptides = df['Unnamed: 0']
 peptides.column = ['Sequence']
@@ -60,4 +60,4 @@ for i, peptide in tqdm(enumerate(peptides)):
 cksaap_df = pd.DataFrame(cksaap_encode)
 
 cksaap_df.insert(0, None, peptides)
-cksaap_df.to_csv('cksaap.tsv', index=False, header=False)
+cksaap_df.to_csv('./Cache/cksaap.tsv', index=False, header=False)

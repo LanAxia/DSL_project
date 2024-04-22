@@ -27,7 +27,7 @@ amino_acid_index = {
 }
 
 
-df = pd.read_excel(r"1-s2.0-S1074552115002574-mmc2.xlsx")
+df = pd.read_excel("./Data/peptides10.xlsx")
 
 peptides = df['Unnamed: 0']
 peptides.column = ['Sequence']
@@ -50,4 +50,4 @@ binary = np.stack(binary_encoded)
 binary_df = pd.DataFrame(binary)
 binary_df.insert(0, None, peptides)
 
-binary_df.to_csv('binary.tsv', index=False, header=False)
+binary_df.to_csv('./Cache/binary.tsv', index=False, header=False)
