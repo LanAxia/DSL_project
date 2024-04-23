@@ -44,7 +44,7 @@ peptides = peptides.str[1:-1]
 # 存储和读取稀疏矩阵
 def save_sparse_matrix(mat: pd.DataFrame, path: str) -> None:
     # 将pd.Dataframe保存为.npz文件
-    mat = coo_matrix(mat.iloc[:, 1:].values)  # 不保存第一列
+    mat = coo_matrix(mat.values)
     save_npz(path, mat)
 
 
@@ -73,8 +73,7 @@ def extract_binary_features(peptides: pd.DataFrame) -> pd.DataFrame:
     binary_df = pd.DataFrame(binary)
     binary_df.insert(0, None, peptides)
 
-    # 检查index是否正确
-
+    # 检查index是否正确，这里不用检查
     return binary_df
 
 
@@ -101,14 +100,19 @@ def extract_cksaap_features(peptides: pd.DataFrame) -> pd.DataFrame:
 
     cksaap_df = pd.DataFrame(cksaap_encode)
     cksaap_df.insert(0, None, peptides)
+
+    # 检查index是否正确，这里不用检查
     return cksaap_df
 
 
 if __name__ == "__main__":
+    # 保存peptides列
+    peptides.to_csv('./Cache/peptides.csv', index=False, header=False)
+
     # 提取binary特征并保存
     binary_df = extract_binary_features(peptides)
-    save_sparse_matrix(binary_df, './Cache/binary.npz')
+    save_sparse_matrix(binary_df.iloc[:, 1:], './Cache/binary.npz')  # 不保存第一列
 
     # 提取cksaap特征并保存
     cksaap_df = extract_cksaap_features(peptides)
-    save_sparse_matrix(cksaap_df, './Cache/cksaap.npz')
+    save_sparse_matrix(cksaap_df.iloc[:, 1:], './Cache/cksaap.npz')  # 不保存第一列
