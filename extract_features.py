@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from scipy.sparse import coo_matrix, save_npz, load_npz
+from collections import Counter
 from tqdm import tqdm
 
 # constant
@@ -57,7 +58,7 @@ def load_sparse_matrix(path: str) -> pd.DataFrame:
 # extract features
 
 # extract BINARY
-def extract_binary_features(peptides: pd.DataFrame) -> pd.DataFrame:
+def extract_binary_features(peptides: pd.Series) -> pd.DataFrame:
     binary_encoded = []
 
     for i, peptide in tqdm(enumerate(peptides), desc='Extracting binary features'):
@@ -89,7 +90,7 @@ def cksaap(sequence: list, k: int):
 
     return encoded
 
-def extract_cksaap_features(peptides: pd.DataFrame) -> pd.DataFrame:
+def extract_cksaap_features(peptides: pd.Series) -> pd.DataFrame:
     cksaap_encode = np.zeros((len(peptides), 2400))
     for i, peptide in tqdm(enumerate(peptides), desc='Extracting cksaap features'):
         peptide = list(peptide)
@@ -105,6 +106,20 @@ def extract_cksaap_features(peptides: pd.DataFrame) -> pd.DataFrame:
     return cksaap_df
 
 
+# 提取AAC特征
+def extract_aac_features(peptides: pd.Series) -> pd.DataFrame:
+    aac_mat = []
+    for i, peptide in enumerate(peptides):
+        peptide_aac = [0] * 20
+        amino_count = Counter(peptide)
+        for amino in amino_count:
+            amino_id = amino_acid_index[amino]
+            peptide_aac[amino_id] = amino_count[amino] / len(peptide)  # 计算每个氨基酸出现的频率
+        aac_mat.append(peptide_aac)
+    aac_df = pd.DataFrame(aac_mat)
+    return aac_df
+
+
 if __name__ == "__main__":
     # 保存peptides列
     peptides.to_csv('./Cache/peptides.csv', index=False, header=False)
@@ -116,3 +131,7 @@ if __name__ == "__main__":
     # 提取cksaap特征并保存
     cksaap_df = extract_cksaap_features(peptides)
     save_sparse_matrix(cksaap_df.iloc[:, 1:], './Cache/cksaap.npz')  # 不保存第一列
+
+    # 提取AAC特征并保存
+    aac_df = extract_aac_features(peptides)
+    save_sparse_matrix(aac_df, './Cache/aac.npz')
