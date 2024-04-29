@@ -120,6 +120,18 @@ def extract_aac_features(peptides: pd.Series) -> pd.DataFrame:
     return aac_df
 
 
+# 读取所有特征
+def load_features() -> pd.DataFrame:
+    # 一次性加载所有特征，返回DataFrame
+    peptides = pd.read_csv("./Cache/peptides.csv")
+    binary = load_sparse_matrix("./Cache/binary.npz")
+    cksaap = load_sparse_matrix("./Cache/cksaap.npz")
+    aac = load_sparse_matrix("./Cache/aac.npz")
+
+    features = pd.concat([peptides, binary, cksaap, aac], axis=1)
+    return features
+
+
 if __name__ == "__main__":
     # 保存peptides列
     peptides.to_csv('./Cache/peptides.csv', index=False, header=False)
