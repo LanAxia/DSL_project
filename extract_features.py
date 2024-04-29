@@ -7,40 +7,6 @@ from tqdm import tqdm
 # constant
 K_MAX = 6
 
-# load data
-df = pd.read_excel("./Data/peptides10.xlsx")
-
-# construct amino to index map
-amino_acid_index = {
-    'A': 0,  # Alanine
-    'R': 1,  # Arginine
-    'N': 2,  # Asparagine
-    'D': 3,  # Aspartic acid
-    'C': 4,  # Cysteine
-    'E': 5,  # Glutamic acid
-    'Q': 6,  # Glutamine
-    'G': 7,  # Glycine
-    'H': 8,  # Histidine
-    'I': 9,  # Isoleucine
-    'L': 10, # Leucine
-    'K': 11, # Lysine
-    'M': 12, # Methionine
-    'F': 13, # Phenylalanine
-    'P': 14, # Proline
-    'S': 15, # Serine
-    'T': 16, # Threonine
-    'W': 17, # Tryptophan
-    'Y': 18, # Tyrosine
-    'V': 19  # Valine
-}
-
-# preprocess data
-peptides = df['Unnamed: 0']
-peptides.column = ['Sequence']
-
-peptides = peptides.str.replace(' ', '', regex=False)
-peptides = peptides.str[1:-1]
-
 
 # 存储和读取稀疏矩阵
 def save_sparse_matrix(mat: pd.DataFrame, path: str) -> None:
@@ -133,6 +99,7 @@ def load_features() -> pd.DataFrame:
 
 
 if __name__ == "__main__":
+    
     # 保存peptides列
     peptides.to_csv('./Cache/peptides.csv', index=False, header=False)
 
