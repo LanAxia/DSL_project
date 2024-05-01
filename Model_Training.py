@@ -1,6 +1,8 @@
 # import libraries
 import numpy as np
 import pandas as pd
+from tqdm import tqdm
+from collections import Counter
 
 import sklearn
 from sklearn.model_selection import train_test_split
@@ -13,7 +15,6 @@ import torch.optim as optim
 
 from transformers import BertTokenizerFast, BertModel
 
-from tqdm import tqdm
 
 # 导入其他文件
 from extract_features import load_features
@@ -53,6 +54,16 @@ if __name__ == "__main__":
     data.iloc[:, 0] = data.iloc[:, 0].map(lambda x: x.strip()).map(lambda x: x[1:-1])  # 删除首尾的氨基酸和空格
     data = data.iloc[:, :-1]  # 删除最后一列
 
+    # 处理重复数据
+    peptides = data.iloc[:, 0]
+    repeat_peptides = [x for x, v in Counter(peptides.values.tolist()).items() if v > 1]
+    repeat_peptides = data[data.iloc[:, 0].isin(repeat_peptides)]
+    repeat_peptides = repeat_peptides.groupby("Unnamed: 0").mean()
+    repeat_peptides = repeat_peptides.reset_index()
+    data = data[~data.iloc[:, 0].isin(repeat_peptides.iloc[:, 0])]
+    data = pd.concat([data, repeat_peptides], axis=0)
+
+
     # 得到氨基酸序列
     peptides = data.iloc[:, 0].values.tolist()  # 肽链的列表（字符串）
 
@@ -85,10 +96,16 @@ if __name__ == "__main__":
 
     # 训练模型
     # 设置optimizer
-    bert_params = bert_model.parameters()
-    forward_params = bio_model.parameters()
-    bert_optim = optim.Adam(bert_model.parameters(), lr=1e-6)
-    forward_optim = optim.Adam(bio_model.parameters(), lr=1e-3)
+    train_bert_params = [id(bert_model.pooler.dense.bias), id(bert_model.pooler.dense.weight)]
+    bert_params = filter(lambda p: id(p) not in train_bert_params, bert_model.parameters())
+    optimizer = optim.Adam(
+        [
+            {"params": bert_params, "lr": 1e-6},
+            {"params": bert_model.pooler.dense.bias, "lr": 1e-3},
+            {"params": bert_model.pooler.dense.weight, "lr": 1e-3},
+            {"params": bio_model.parameters(), "lr": 1e-3}
+        ], lr=1e-3
+    )
 
     # 设置criterion
     criterion = nn.MSELoss()
@@ -105,8 +122,7 @@ if __name__ == "__main__":
     for epoch in pbar:
         loss_track_epoch = []
         for peptides_epoch, features_epoch, labels_epoch in train_dataloader:
-            bert_optim.zero_grad()
-            forward_optim.zero_grad()
+            optimizer.zero_grad()
 
             tokens_epoch = tokenizer(peptides_epoch, return_tensors='pt').to(device)
             bert_output = bert_model(**tokens_epoch).last_hidden_state.view(len(peptides_epoch), -1)  # 将embed结果铺平
@@ -117,8 +133,7 @@ if __name__ == "__main__":
             loss = criterion(bio_output.view(labels_epoch.size()), labels_epoch)  # 在label只有一个特征时需要调整tensor结构
             loss.backward()
 
-            bert_optim.step()
-            forward_optim.step()
+            optimizer.step()
 
             loss_track_epoch.append(loss.detach().to("cpu").item())
 
@@ -148,7 +163,13 @@ if __name__ == "__main__":
     for i in range(labels.shape[1]):
         mse[i] = np.sqrt(sklearn.metrics.mean_squared_error(test_truth[:, i], test_pred[:, i]))
     mse = pd.DataFrame(mse)
-    mse.to_csv("./Cache/scores_bionn.csv", index=False)
+    # mse.to_csv("./Cache/scores_bionn.csv", index=False)
+    #
+    # # 保存模型
+    # torch.save(bert_model.state_dict(), "./Model/bert_model.pth")
+    # torch.save(bio_model.state_dict(), "./Model/bio_model.pth")
+
+    print(np.mean(mse))
 # 100 0.71 (without knn)
 # 300 0.70
 # 100 0.72 (without cksaap)

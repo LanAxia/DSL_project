@@ -123,15 +123,22 @@ def load_features() -> pd.DataFrame:
 
 if __name__ == "__main__":
     df = pd.read_excel("./Data/peptides10.xlsx")
+    df.iloc[:, 0] = df.iloc[:, 0].map(lambda x: x.strip()).map(lambda x: x[1:-1])  # 删除首尾的氨基酸和空格
+    df = df.iloc[:, :-1]  # 删除最后一列
 
-    # preprocess data
-    peptides = df['Unnamed: 0']
-    peptides.column = ['Sequence']
-
-    peptides = peptides.str.replace(' ', '', regex=False)
-    peptides = peptides.str[1:-1]
+    # 处理重复数据
+    peptides = df.iloc[:, 0]
+    repeat_peptides = [x for x, v in Counter(peptides.values.tolist()).items() if v > 1]
+    repeat_peptides = df[df.iloc[:, 0].isin(repeat_peptides)]
+    repeat_peptides = repeat_peptides.groupby("Unnamed: 0").mean()
+    repeat_peptides = repeat_peptides.reset_index()
+    df = df[~df.iloc[:, 0].isin(repeat_peptides.iloc[:, 0])]
+    df = pd.concat([df, repeat_peptides], axis=0).reset_index(drop=True)
+    df.to_csv("./Data/processed_peptides10.csv", index=False)  # 保存处理后的数据
 
     # 保存peptides列
+    peptides = df['Unnamed: 0']
+    peptides.column = ['Sequence']
     peptides.to_csv('./Cache/peptides.csv', index=False, header=False)
 
     # 提取binary特征并保存
