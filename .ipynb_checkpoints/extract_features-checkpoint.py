@@ -18,15 +18,15 @@ amino_acid_index = {
     'G': 7,  # Glycine
     'H': 8,  # Histidine
     'I': 9,  # Isoleucine
-    'L': 10,  # Leucine
-    'K': 11,  # Lysine
-    'M': 12,  # Methionine
-    'F': 13,  # Phenylalanine
-    'P': 14,  # Proline
-    'S': 15,  # Serine
-    'T': 16,  # Threonine
-    'W': 17,  # Tryptophan
-    'Y': 18,  # Tyrosine
+    'L': 10, # Leucine
+    'K': 11, # Lysine
+    'M': 12, # Methionine
+    'F': 13, # Phenylalanine
+    'P': 14, # Proline
+    'S': 15, # Serine
+    'T': 16, # Threonine
+    'W': 17, # Tryptophan
+    'Y': 18, # Tyrosine
     'V': 19  # Valine
 }
 
@@ -76,7 +76,6 @@ def cksaap(sequence: list, k: int):
     encoded = encoded / (sequence_len - k)
 
     return encoded
-
 
 def extract_cksaap_features(peptides: pd.Series) -> pd.DataFrame:
     cksaap_encode = np.zeros((len(peptides), 2400))
