@@ -50,7 +50,7 @@ class PeptidesDataLoader(DataLoader):
 
 if __name__ == "__main__":
     # import data and preprocess
-    data = pd.read_excel("./Data/peptides10.xlsx")  # load data
+    data = pd.read_csv("./Data/processed_peptides10.csv")  # load data
     data.iloc[:, 0] = data.iloc[:, 0].map(lambda x: x.strip()).map(lambda x: x[1:-1])  # 删除首尾的氨基酸和空格
     data = data.iloc[:, :-1]  # 删除最后一列
 
