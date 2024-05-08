@@ -11,22 +11,6 @@ from catboost import CatBoostRegressor
 # 导入其他文件
 from extract_features import load_features
 
-# constant
-SAVE = True
-
-# import data
-data = pd.read_excel("./Data/peptides10.xlsx")  # load data
-data.iloc[:, 0] = data.iloc[:, 0].map(lambda x: x.strip()).map(lambda x: x[1:-1])  # 删除首尾的氨基酸和空格
-data = data.iloc[:, :-1]  # 删除最后一列
-
-# 得到氨基酸序列
-peptides = data.iloc[:, 0].values.tolist()  # 肽链的列表（字符串）
-
-mmp3_y = data.iloc[:, 3].values  # 得到mmp3的y
-
-# load extracted features
-features_x = load_features().iloc[:, 1:].values
-
 
 # 获取cat最优参数
 def kf_test(lr: float, iter: int, labels: np.array) -> float:
@@ -44,19 +28,6 @@ def kf_test(lr: float, iter: int, labels: np.array) -> float:
         kf_errors.append(error)
     avg_kf_errors = np.average(kf_errors)
     return avg_kf_errors
-
-
-iterations = [500, 1000, 1500]
-lrs = [0.01, 0.1, 1]
-errors = dict()
-for iteration in iterations:
-    for lr in lrs:
-        avg_error = kf_test(lr, iteration, mmp3_y)
-        errors[(lr, iteration)] = avg_error
-
-# 获取最优参数
-best_param = sorted([(k, errors[k]) for k in errors], key=lambda x: x[1])
-best_lr, best_iter = best_param[0][0]
 
 
 # 测试cat在全部mmp上的表现
@@ -77,9 +48,39 @@ def kf_test_all(lr: float, iter: int, labels: np.array) -> np.ndarray:
     return kf_errors
 
 
-mmp_labels = data.iloc[:, 1:].values
-all_mmp_scores = kf_test_all(best_lr, best_iter, mmp_labels)
+if __name__ == "__main__":
+    # constant
+    SAVE = True
 
-# 保存实验结果
-all_mmp_scores = pd.DataFrame(all_mmp_scores, columns=data.columns[1:])
-all_mmp_scores.to_csv("./Cache/scores_xgb.csv", index=False)
+    # import data
+    data = pd.read_excel("./Data/peptides10.xlsx")  # load data
+    data.iloc[:, 0] = data.iloc[:, 0].map(lambda x: x.strip()).map(lambda x: x[1:-1])  # 删除首尾的氨基酸和空格
+    data = data.iloc[:, :-1]  # 删除最后一列
+
+    # 得到氨基酸序列
+    peptides = data.iloc[:, 0].values.tolist()  # 肽链的列表（字符串）
+
+    mmp3_y = data.iloc[:, 3].values  # 得到mmp3的y
+
+    # load extracted features
+    features_x = load_features().iloc[:, 1:].values
+
+    iterations = [500, 1000, 1500]
+    lrs = [0.01, 0.1, 1]
+    errors = dict()
+    for iteration in iterations:
+        for lr in lrs:
+            avg_error = kf_test(lr, iteration, mmp3_y)
+            errors[(lr, iteration)] = avg_error
+
+    # 获取最优参数
+    best_param = sorted([(k, errors[k]) for k in errors], key=lambda x: x[1])
+    best_lr, best_iter = best_param[0][0]
+    print(best_lr, best_iter)  # 输出最优参数
+
+    mmp_labels = data.iloc[:, 1:].values
+    all_mmp_scores = kf_test_all(best_lr, best_iter, mmp_labels)
+
+    # 保存实验结果
+    all_mmp_scores = pd.DataFrame(all_mmp_scores, columns=data.columns[1:])
+    all_mmp_scores.to_csv("./Cache/scores_xgb.csv", index=False)

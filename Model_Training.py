@@ -18,7 +18,7 @@ from transformers import BertTokenizerFast, BertModel
 
 # 导入其他文件
 from extract_features import load_features
-from models import BioNN
+from models import BioNN, BioDeepNN, BioResNet
 
 # constant
 SAVE = True
@@ -52,7 +52,6 @@ if __name__ == "__main__":
     # import data and preprocess
     data = pd.read_csv("./Data/processed_peptides10.csv")  # load data
 
-
     # 得到氨基酸序列
     peptides = data.iloc[:, 0].values.tolist()  # 肽链的列表（字符串）
 
@@ -81,7 +80,7 @@ if __name__ == "__main__":
     test_dataloader = PeptidesDataLoader(test_peptides, test_features, test_labels, 512, shuffle=False)
 
     # 创建全连接模型
-    bio_model = BioNN(768 * 10 + features_x.shape[1], labels_num=18).to(device)  # 预测全部mmp
+    bio_model = BioDeepNN(768 * 10 + features_x.shape[1], labels_num=18).to(device)  # 预测全部mmp
 
     # 训练模型
     # 设置optimizer
@@ -159,7 +158,12 @@ if __name__ == "__main__":
     # torch.save(bio_model.state_dict(), "./Model/bio_model.pth")
 
     print(np.mean(mse))
-# 100 0.71 (without knn)
-# 300 0.70
-# 100 0.72 (without cksaap)
-# 0.78
+    # BioNN
+    # 100 0.71 (without knn)
+    # 300 0.70
+    # 100 0.72 (without cksaap)
+    # 0.78
+    # BioDeepNN
+    # 100 0.6872 (without knn)
+    # BioResNet
+    # 100 0.73 (without knn)
