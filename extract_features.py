@@ -115,9 +115,9 @@ def load_features() -> pd.DataFrame:
     binary = load_sparse_matrix("./Cache/binary.npz")
     cksaap = load_sparse_matrix("./Cache/cksaap.npz")
     aac = load_sparse_matrix("./Cache/aac.npz")
-    knn = pd.DataFrame(np.load("./Data/knn.npy"))
+    # knn = pd.DataFrame(np.load("./Data/knn.npy"))  # 暂时没有加knn特征
 
-    features = pd.concat([peptides, binary, cksaap, aac, knn], axis=1)  # 仅使用部分特征
+    features = pd.concat([peptides, binary, cksaap, aac], axis=1)  # 仅使用部分特征
     return features
 
 
