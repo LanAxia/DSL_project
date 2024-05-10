@@ -65,22 +65,23 @@ if __name__ == "__main__":
     # load extracted features
     features_x = load_features().iloc[:, 1:].values
 
-    iterations = [500, 1000, 1500]
-    lrs = [0.01, 0.1, 1]
+    # 基于mmp3获取最优参数
+    iterations = [500]
+    lrs = [1, 0.1, 0.01, 0.001]
     errors = dict()
     for iteration in iterations:
         for lr in lrs:
             avg_error = kf_test(lr, iteration, mmp3_y)
             errors[(lr, iteration)] = avg_error
 
-    # 获取最优参数
     best_param = sorted([(k, errors[k]) for k in errors], key=lambda x: x[1])
     best_lr, best_iter = best_param[0][0]
     print(best_lr, best_iter)  # 输出最优参数
 
-    mmp_labels = data.iloc[:, 1:].values
-    all_mmp_scores = kf_test_all(best_lr, best_iter, mmp_labels)
-
-    # 保存实验结果
-    all_mmp_scores = pd.DataFrame(all_mmp_scores, columns=data.columns[1:])
-    all_mmp_scores.to_csv("./Cache/scores_xgb.csv", index=False)
+    # best_lr, best_iter = 0.01, 1500  # 最优参数
+    # mmp_labels = data.iloc[:, 1:].values
+    # all_mmp_scores = kf_test_all(best_lr, best_iter, mmp_labels)
+    #
+    # # 保存实验结果
+    # all_mmp_scores = pd.DataFrame(all_mmp_scores, columns=data.columns[1:])
+    # all_mmp_scores.to_csv("./Cache/scores_xgb.csv", index=False)

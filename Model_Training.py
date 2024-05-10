@@ -151,11 +151,11 @@ if __name__ == "__main__":
     for i in range(labels.shape[1]):
         mse[i] = np.sqrt(sklearn.metrics.mean_squared_error(test_truth[:, i], test_pred[:, i]))
     mse = pd.DataFrame(mse)
-    # mse.to_csv("./Cache/scores_bionn.csv", index=False)
-    #
-    # # 保存模型
-    # torch.save(bert_model.state_dict(), "./Model/bert_model.pth")
-    # torch.save(bio_model.state_dict(), "./Model/bio_model.pth")
+    mse.to_csv("./Cache/scores_bionn.csv", index=False)
+
+    # 保存模型
+    torch.save(bert_model.state_dict(), "./Model/bert_model.pth")
+    torch.save(bio_model.state_dict(), "./Model/bio_model.pth")
 
     print(np.mean(mse))
     # BioNN

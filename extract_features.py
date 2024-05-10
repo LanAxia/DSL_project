@@ -6,6 +6,7 @@ from tqdm import tqdm
 
 # constant
 K_MAX = 6
+
 # construct amino to index map
 amino_acid_index = {
     'A': 0,  # Alanine
@@ -115,13 +116,35 @@ def load_features() -> pd.DataFrame:
     binary = load_sparse_matrix("./Cache/binary.npz")
     cksaap = load_sparse_matrix("./Cache/cksaap.npz")
     aac = load_sparse_matrix("./Cache/aac.npz")
-    # knn = pd.DataFrame(np.load("./Data/knn.npy"))  # 暂时没有加knn特征
+    knn = []
+    for i in list(range(1, 4)) + list(range(7, 18)) + [19, 20, 24, 25]:  # 加载所有的knn特征
+        mmp_knn = np.load("./Data/MMP{}_no_repeat.npy".format(i))
+        knn.append(pd.DataFrame(mmp_knn))
+    knn = pd.concat(knn, axis=1)
 
-    features = pd.concat([peptides, binary, cksaap, aac], axis=1)  # 仅使用部分特征
+    features = pd.concat([peptides, binary, cksaap, aac, knn], axis=1)  # 仅使用部分特征
+    return features
+
+
+# 读取所有待预测数据的特征
+def load_pred_features() -> pd.DataFrame:
+    # 一次性加载所有特征，返回DataFrame
+    peptides = pd.read_csv("./Cache/pred_peptides.csv")
+    binary = load_sparse_matrix("./Cache/pred_binary.npz")
+    cksaap = load_sparse_matrix("./Cache/pred_cksaap.npz")
+    aac = load_sparse_matrix("./Cache/pred_aac.npz")
+    knn = []  # 这部分代码没写完
+    for i in list(range(1, 4)) + list(range(7, 18)) + [19, 20, 24, 25]:  # 加载所有的knn特征
+        mmp_knn = np.load("./Data/MMP{}_no_repeat.npy".format(i))
+        knn.append(pd.DataFrame(mmp_knn))
+    knn = pd.concat(knn, axis=1)
+
+    features = pd.concat([peptides, binary, cksaap, aac, knn], axis=1)  # 仅使用部分特征
     return features
 
 
 if __name__ == "__main__":
+    # 处理训练数据
     df = pd.read_excel("./Data/peptides10.xlsx")
     df.iloc[:, 0] = df.iloc[:, 0].map(lambda x: x.strip()).map(lambda x: x[1:-1])  # 删除首尾的氨基酸和空格
     df = df.iloc[:, :-1]  # 删除最后一列
@@ -152,3 +175,21 @@ if __name__ == "__main__":
     # 提取AAC特征并保存
     aac_df = extract_aac_features(peptides)
     save_sparse_matrix(aac_df, './Cache/aac.npz')
+
+    # 处理测试数据（并不是训练时用的测试集，而是最后的预测集）
+    pred_df = pd.read_csv("./Cache/to_predict_peptides.csv")
+    pred_peptides = pred_df.iloc[:, 0]
+    pred_peptides.column = ['Sequence']
+    peptides.to_csv('./Cache/pred_peptides.csv', index=False, header=False)
+
+    # 提取binary特征并保存
+    pred_binary_df = extract_binary_features(pred_peptides)
+    save_sparse_matrix(pred_binary_df.iloc[:, 1:], './Cache/pred_binary.npz')  # 不保存第一列
+
+    # 提取cksaap特征并保存
+    pred_cksaap_df = extract_cksaap_features(pred_peptides)
+    save_sparse_matrix(pred_cksaap_df.iloc[:, 1:], './Cache/pred_cksaap.npz')  # 不保存第一列
+
+    # 提取AAC特征并保存
+    pred_aac_df = extract_aac_features(pred_peptides)
+    save_sparse_matrix(pred_aac_df, './Cache/pred_aac.npz')
