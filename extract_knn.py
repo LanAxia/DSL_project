@@ -24,26 +24,32 @@ train_idx = pd.read_csv("Cache/train_indices.csv", header=None).to_numpy(dtype=i
 
 df = pd.read_csv("Data/processed_peptides10.csv", sep=',')
 
+merops_df = pd.read_csv("Data/MMP3_unique_sequence.csv", header=None)
+
 # df = df.loc[train_idx]
 
 sequences = df["Sequence"].to_list()
+merops_sequences = merops_df[0].to_list()
 
 
-"""blosum = np.zeros((len(sequences), len(sequences)), dtype=int)
+"""blosum = np.zeros((len(sequences), len(merops_sequences)), dtype=int)
 for i in tqdm(range(len(sequences))):
     s1 = sequences[i]
-    for j in range(len(sequences)):
-        s2 = sequences[j]
+    for j in range(len(merops_sequences)):
+        s2 = merops_sequences[j]
         blosum[i, j] = int(calculate_blosum62(s1, s2))
 
-np.save("blosum_no_repeat.npy", blosum)"""
+np.save("blosum_MMP9.npy", blosum)"""
 
-blosum_all = np.load("blosum_no_repeat.npy")
+blosum_all = np.load("blosum_MMP3.npy")
+
+num_sequences = blosum_all.shape[1]
+
 blosum_all = pd.DataFrame(blosum_all)
 a = 1
 cols = df.columns[1:19].to_list()
 # cols = ['MMP2', 'MMP7', 'MMP8', 'MMP9', 'MMP10', 'MMP11', 'MMP12', 'MMP13', 'MMP14', 'MMP15', 'MMP16', 'MMP17', 'MMP16']
-num_sequences = len(df)
+
 ks = [0.01, 0.03, 0.05, 0.07, 0.09]
 
 for col_i, col in enumerate(cols):
@@ -52,16 +58,14 @@ for col_i, col in enumerate(cols):
     score_this = df[["Sequence", col]]
     print("===========", col, "============")
     for k_i, k in enumerate(ks):
-        j = 0
-        for index, row in tqdm(score_this.iterrows()):
-            bl_scores = blosum_all.loc[:, index].copy()
-            score_this.loc[:,"blosum"] = bl_scores
-            score_this_copy = score_this.copy().drop(index=index).sort_values(by="blosum", ascending=False).reset_index(drop=True)
+        for j in tqdm(range(num_sequences)):
+            bl_scores = blosum_all.loc[:, j].copy()
+            score_this.loc[:, "blosum"] = bl_scores
+            score_this_copy = score_this.copy().sort_values(by="blosum", ascending=False).reset_index(drop=True)
             score_this_copy["mask"] = score_this_copy.loc[:, col] > threshold
-            knn[j, k_i] = score_this_copy.loc[0:int(num_sequences * k), "mask"].mean()
-            j += 1
+            knn[j, k_i] = score_this_copy.loc[0:int(len(df) * k), "mask"].mean()
         a = 1
-    np.save(f"Data/{col}_no_repeat.npy", knn)
+    np.save(f"Data/knn_MMP3_{col}_prediction.npy", knn)
 
 a = 1
 # k = 0.01
