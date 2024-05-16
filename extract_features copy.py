@@ -129,11 +129,13 @@ def load_features() -> pd.DataFrame:
 # 读取所有待预测数据的特征
 def load_pred_features(mmp: int) -> pd.DataFrame:
     # 一次性加载所有特征，返回DataFrame
-    mmp_peptides = pd.read_csv("./MMP{}_unique_sequence.csv".format(mmp), header=None).iloc[:, 0]
+    all_peptides = pd.read_csv("./Cache/pred_peptides.csv", header=None)
+    mmp_peptides = pd.read_csv("./MMP{}_unique_sequence.csv".format(mmp), header=None)
+    pep_ids = [all_peptides[all_peptides[0] == x[0]].index.to_list()[0] for x in mmp_peptides.values.tolist()]
 
-    binary = extract_binary_features(mmp_peptides).iloc[:, 1:]
-    cksaap = extract_cksaap_features(mmp_peptides).iloc[:, 1:]
-    aac = extract_aac_features(mmp_peptides)
+    binary = load_sparse_matrix("./Cache/pred_binary.npz").iloc[pep_ids].reset_index(drop=True)
+    cksaap = load_sparse_matrix("./Cache/pred_cksaap.npz").iloc[pep_ids].reset_index(drop=True)
+    aac = load_sparse_matrix("./Cache/pred_aac.npz").iloc[pep_ids].reset_index(drop=True)
     knn = []  # 这部分代码没写完
     for i in list(range(1, 4)) + list(range(7, 18)) + [19, 20, 24, 25]:  # 加载所有的knn特征
         mmp_knn = np.load("./Data/knn_MMP{}_MMP{}_prediction.npy".format(mmp, i))

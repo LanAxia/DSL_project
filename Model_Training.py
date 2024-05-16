@@ -22,7 +22,7 @@ from models import BioNN, BioDeepNN, BioResNet
 
 # constant
 SAVE = True
-device = torch.device("cuda") if torch.cuda.is_available() else torch.device("CPU")
+device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
 
 # 定义Dataset和DataLoader
