@@ -97,7 +97,11 @@ if __name__ == "__main__":
     labels = labels / regular_coefficient  # 归一化处理
     labels = torch.from_numpy(labels).float().to(device)
 
-    train_dataloader = PeptidesDataLoader(peptides, features_x, labels, 512, shuffle=True)
+    # 生成tokens
+    tokens = tokenizer(peptides, return_tensors='pt')
+    input_ids, attention_mask, token_type_ids = tokens["input_ids"], tokens["attention_mask"], tokens["token_type_ids"]
+
+    train_dataloader = BertDataLoader(input_ids, attention_mask, token_type_ids, features_x, labels, 512, shuffle=True)
 
     # 创建全连接模型
     bio_model = BioResNet(768 * 10 + features_x.shape[1], labels_num=18).to(device)  # 预测全部mmp
@@ -129,13 +133,16 @@ if __name__ == "__main__":
     loss_track = []
     for epoch in pbar:
         loss_track_epoch = []
-        for peptides_epoch, features_epoch, labels_epoch in train_dataloader:
+        for epoch_input_ids, epoch_attention_mask, epoch_token_type_ids, features_epoch, labels_epoch in train_dataloader:
             optimizer.zero_grad()
 
-            tokens_epoch = tokenizer(peptides_epoch, return_tensors='pt').to(device)
-            bert_output = bert_model(**tokens_epoch).last_hidden_state.view(len(peptides_epoch), -1)  # 将embed结果铺平
-            bio_input = torch.cat([bert_output, features_epoch.to(device)], dim=1)
+            epoch_input_ids = epoch_input_ids.to(device)
+            epoch_attention_mask = epoch_attention_mask.to(device)
+            epoch_token_type_ids = epoch_token_type_ids.to(device)
 
+            bert_output = bert_model(input_ids=epoch_input_ids, attention_mask=epoch_attention_mask, token_type_ids=epoch_token_type_ids).last_hidden_state.view(features_epoch.shape[0], -1)  # 将embed结果铺平
+            
+            bio_input = torch.cat([bert_output, features_epoch.to(device)], dim=1)
             bio_output = bio_model(bio_input)
 
             loss = criterion(bio_output.view(labels_epoch.size()), labels_epoch)  # 在label只有一个特征时需要调整tensor结构

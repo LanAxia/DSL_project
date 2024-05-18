@@ -75,7 +75,7 @@ def validate_dl(model_class: nn.Module, peptides: list, features: np.array, y: n
                 {"params": bert_params, "lr": 1e-6},
                 {"params": bert_model.pooler.dense.bias, "lr": 1e-3},
                 {"params": bert_model.pooler.dense.weight, "lr": 1e-3},
-                {"params": bio_model.parameters(), "lr": 1e-3}
+                {"params": bio_model.parameters(), "lr": 1e-3}, 
             ], lr=1e-3
         )
 
