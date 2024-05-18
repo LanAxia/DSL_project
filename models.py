@@ -89,7 +89,7 @@ class BioResNet(nn.Module):
         output = self.dropout3(output)
         output = F.tanh(self.nn4(output))
         output = self.dropout4(output)
-        output = F.tanh(self.nn5(output))
+        output = self.nn5(output)
         return output
 
 class LSTMFilter(nn.Module):

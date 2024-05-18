@@ -42,8 +42,7 @@ features_x = load_features().iloc[:, 1:].values
 
 # 处理mmp y的数据
 all_mmp_y = data.iloc[:, 1:].values
-regular_coefficient = np.max(np.abs(all_mmp_y))
-all_mmp_y = all_mmp_y / regular_coefficient
+all_mmp_y = all_mmp_y
 
 # import Bert-Base-Protein model
 checkpoint = 'unikei/bert-base-proteins'
@@ -70,11 +69,13 @@ def validate_dl(model_class: nn.Module, peptides: list, features: np.array, y: n
         # 设置optimizer和criterion
         train_bert_params = [id(bert_model.pooler.dense.bias), id(bert_model.pooler.dense.weight)]
         bert_params = filter(lambda p: id(p) not in train_bert_params, bert_model.parameters())
+        for param in bert_params:
+            param.requires_grad = False
         optimizer = optim.Adam(
             [
-                {"params": bert_params, "lr": 1e-6},
+                # {"params": bert_params, "lr": 1e-6},
                 {"params": bert_model.pooler.dense.bias, "lr": 1e-3},
-                {"params": bert_model.pooler.dense.weight, "lr": 1e-3},
+                {"params": bert_model.pooler.dense.weight, "lr": 1e-3}, 
                 {"params": bio_model.parameters(), "lr": 1e-3}, 
             ], lr=1e-3
         )
@@ -124,8 +125,8 @@ def validate_dl(model_class: nn.Module, peptides: list, features: np.array, y: n
 
                 bio_output = bio_model(bio_input)
                 pred.append(bio_output.to("cpu"))
-        pred = torch.cat(pred, dim=0).detach().numpy() * regular_coefficient
-        test_y = test_y.to("cpu").numpy() * regular_coefficient
+        pred = torch.cat(pred, dim=0).detach().numpy()
+        test_y = test_y.to("cpu").numpy()
 
 
         # 记录regression error
@@ -157,13 +158,13 @@ bionn_rg_error, bionn_cl_error = validate_dl(BioNN, peptides, features_x, all_mm
 np.save("./Result/BioNN_rg_error.npy", bionn_rg_error)
 np.save("./Result/BioNN_cl_error.npy", bionn_cl_error)
 
-biodnn_rg_error, biodnn_cl_error = validate_dl(BioDeepNN, peptides, features_x, all_mmp_y)
-np.save("./Result/BioDNN_rg_error.npy", biodnn_rg_error)
-np.save("./Result/BioDNN_cl_error.npy", biodnn_cl_error)
+# biodnn_rg_error, biodnn_cl_error = validate_dl(BioDeepNN, peptides, features_x, all_mmp_y)
+# np.save("./Result/BioDNN_rg_error.npy", biodnn_rg_error)
+# np.save("./Result/BioDNN_cl_error.npy", biodnn_cl_error)
 
-biores_rg_error, biores_cl_error = validate_dl(BioResNet, peptides, features_x, all_mmp_y)
-np.save("./Result/BioRes_rg_error.npy", biores_rg_error)
-np.save("./Result/BioRes_cl_error.npy", biores_cl_error)
+# biores_rg_error, biores_cl_error = validate_dl(BioResNet, peptides, features_x, all_mmp_y)
+# np.save("./Result/BioRes_rg_error.npy", biores_rg_error)
+# np.save("./Result/BioRes_cl_error.npy", biores_cl_error)
 
 # BioNN
 # 100 0.71 (without knn)
