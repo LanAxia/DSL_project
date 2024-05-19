@@ -1,3 +1,4 @@
+# 这个文件用于使用给定的机器学习模型在完整的数据集上训练并保存模型，作为我们最终使用的模型
 # import libraries
 import numpy as np
 import pandas as pd
@@ -156,6 +157,8 @@ if __name__ == "__main__":
         loss_track.append(avg_loss)
         pbar.set_postfix(loss=avg_loss)
 
+    loss_track = np.array(loss_track)
     # 保存模型
     torch.save(bert_model.state_dict(), "./Model/bert_model.pth")
     torch.save(bio_model.state_dict(), "./Model/bio_model.pth")
+    np.save(loss_track, "./Model/loss_track.npy")  # 保存模型训练的loss跟踪

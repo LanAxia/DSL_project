@@ -1,3 +1,4 @@
+# 这个实验和DL_experiment的区别是这里的模型使用滤波器给Bert输出的embedding降维，但是通过实验发现这个方法并不怎么有效
 # import libraries
 import numpy as np
 import pandas as pd
