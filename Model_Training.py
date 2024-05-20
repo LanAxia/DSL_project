@@ -1,3 +1,4 @@
+# 这个文件用于使用给定的机器学习模型在完整的数据集上训练并保存模型，作为我们最终使用的模型
 # import libraries
 import numpy as np
 import pandas as pd
@@ -48,6 +49,33 @@ class PeptidesDataLoader(DataLoader):
         super().__init__(dataset, batch_size, shuffle)
 
 
+class BertDataset(Dataset):
+    def __init__(self, input_ids, attention_mask, token_type_ids, features, labels):
+        self.input_ids = input_ids
+        self.attention_mask = attention_mask
+        self.token_type_ids = token_type_ids
+        self.features = features
+        self.labels = labels
+
+    def __len__(self):
+        return self.input_ids.shape[0]
+
+    def __getitem__(self, idx):
+        input_id = self.input_ids[idx]
+        attention_m = self.attention_mask[idx]
+        token_type_id = self.token_type_ids[idx]
+        feature = self.features[idx]
+        label = self.labels[idx]
+        return input_id, attention_m, token_type_id, feature, label
+
+
+class BertDataLoader(DataLoader):
+    def __init__(self, input_ids, attention_mask, token_type_ids, features, labels, batch_size, shuffle=True):
+        dataset = BertDataset(input_ids, attention_mask, token_type_ids, features, labels)
+        super().__init__(dataset, batch_size, shuffle)
+
+
+
 if __name__ == "__main__":
     # import data and preprocess
     data = pd.read_csv("./Data/processed_peptides10.csv")  # load data
@@ -70,17 +98,14 @@ if __name__ == "__main__":
     labels = labels / regular_coefficient  # 归一化处理
     labels = torch.from_numpy(labels).float().to(device)
 
-    # 划分训练集和测试集
-    train_peptides, test_peptides, train_features, test_features, train_labels, test_labels = train_test_split(peptides,
-                                                                                                               features_x,
-                                                                                                               labels,
-                                                                                                               test_size=0.2,
-                                                                                                               random_state=33)
-    train_dataloader = PeptidesDataLoader(train_peptides, train_features, train_labels, 512, shuffle=True)
-    test_dataloader = PeptidesDataLoader(test_peptides, test_features, test_labels, 512, shuffle=False)
+    # 生成tokens
+    tokens = tokenizer(peptides, return_tensors='pt')
+    input_ids, attention_mask, token_type_ids = tokens["input_ids"], tokens["attention_mask"], tokens["token_type_ids"]
+
+    train_dataloader = BertDataLoader(input_ids, attention_mask, token_type_ids, features_x, labels, 512, shuffle=True)
 
     # 创建全连接模型
-    bio_model = BioDeepNN(768 * 10 + features_x.shape[1], labels_num=18).to(device)  # 预测全部mmp
+    bio_model = BioResNet(768 * 10 + features_x.shape[1], labels_num=18).to(device)  # 预测全部mmp
 
     # 训练模型
     # 设置optimizer
@@ -109,13 +134,16 @@ if __name__ == "__main__":
     loss_track = []
     for epoch in pbar:
         loss_track_epoch = []
-        for peptides_epoch, features_epoch, labels_epoch in train_dataloader:
+        for epoch_input_ids, epoch_attention_mask, epoch_token_type_ids, features_epoch, labels_epoch in train_dataloader:
             optimizer.zero_grad()
 
-            tokens_epoch = tokenizer(peptides_epoch, return_tensors='pt').to(device)
-            bert_output = bert_model(**tokens_epoch).last_hidden_state.view(len(peptides_epoch), -1)  # 将embed结果铺平
-            bio_input = torch.cat([bert_output, features_epoch.to(device)], dim=1)
+            epoch_input_ids = epoch_input_ids.to(device)
+            epoch_attention_mask = epoch_attention_mask.to(device)
+            epoch_token_type_ids = epoch_token_type_ids.to(device)
 
+            bert_output = bert_model(input_ids=epoch_input_ids, attention_mask=epoch_attention_mask, token_type_ids=epoch_token_type_ids).last_hidden_state.view(features_epoch.shape[0], -1)  # 将embed结果铺平
+            
+            bio_input = torch.cat([bert_output, features_epoch.to(device)], dim=1)
             bio_output = bio_model(bio_input)
 
             loss = criterion(bio_output.view(labels_epoch.size()), labels_epoch)  # 在label只有一个特征时需要调整tensor结构
@@ -129,41 +157,8 @@ if __name__ == "__main__":
         loss_track.append(avg_loss)
         pbar.set_postfix(loss=avg_loss)
 
-    # 测试模型效果
-    bert_model.eval()
-    bio_model.eval()
-
-    # 预测回归结果
-    test_pred = []
-    with torch.no_grad():
-        for peptides_epoch, features_epoch, labels_epoch in test_dataloader:
-            tokens_epoch = tokenizer(peptides_epoch, return_tensors='pt').to(device)
-            bert_output = bert_model(**tokens_epoch).last_hidden_state.view(len(peptides_epoch), -1)  # 将embed结果铺平
-            bio_input = torch.cat([bert_output, features_epoch.to(device)], dim=1)
-
-            bio_output = bio_model(bio_input)
-            test_pred.append(bio_output.to("cpu"))
-    test_pred = torch.cat(test_pred, dim=0).detach().numpy() * regular_coefficient
-    test_truth = test_labels.to("cpu").numpy() * regular_coefficient
-
-    # 保存mse
-    mse = np.zeros(labels.shape[1])
-    for i in range(labels.shape[1]):
-        mse[i] = np.sqrt(sklearn.metrics.mean_squared_error(test_truth[:, i], test_pred[:, i]))
-    mse = pd.DataFrame(mse)
-    mse.to_csv("./Cache/scores_bionn.csv", index=False)
-
+    loss_track = np.array(loss_track)
     # 保存模型
     torch.save(bert_model.state_dict(), "./Model/bert_model.pth")
     torch.save(bio_model.state_dict(), "./Model/bio_model.pth")
-
-    print(np.mean(mse))
-    # BioNN
-    # 100 0.71 (without knn)
-    # 300 0.70
-    # 100 0.72 (without cksaap)
-    # 0.78
-    # BioDeepNN
-    # 100 0.6872 (without knn)
-    # BioResNet
-    # 100 0.73 (without knn)
+    np.save(loss_track, "./Model/loss_track.npy")  # 保存模型训练的loss跟踪

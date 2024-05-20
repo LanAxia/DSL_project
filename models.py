@@ -91,3 +91,69 @@ class BioResNet(nn.Module):
         output = self.dropout4(output)
         output = self.nn5(output)
         return output
+
+class LSTMFilter(nn.Module):
+    # 定义LSTM模型
+    def __init__(self, input_dim: int = 768, target_dim: int = 16) -> None:
+        super(LSTMFilter, self).__init__()
+        self.lstm = nn.LSTM(input_dim, target_dim, batch_first=True, bidirectional=True)  # 输出维度是16*2=32
+
+    def forward(self, x: torch.Tensor):
+        output, _ = self.lstm(x)
+        output = self.nn(output[:, -1, :])
+        return output
+    
+
+# 滤波器
+# LSTM滤波器
+class LSTMFilter(nn.Module):
+    # 定义LSTM模型
+    def __init__(self, input_dim: int = 768, target_dim: int = 16) -> None:
+        super(LSTMFilter, self).__init__()
+        self.lstm = nn.LSTM(input_dim, target_dim, batch_first=True, bidirectional=True)  # 输出维度是16*2=32
+
+    def forward(self, x: torch.Tensor):
+        output, _ = self.lstm(x)
+        return output.reshape(output.size(0), -1)
+    
+
+# CNN滤波器
+class CNNLayer(nn.Module):
+    # 定义CNN层
+    def __init__(self, in_channels: int = 8, out_channels: int = 16, kernel_size: int = 7, stride: int = 2) -> None:
+        super(CNNLayer, self).__init__()
+        self.cnn = nn.Conv1d(in_channels=in_channels, out_channels=out_channels, kernel_size=kernel_size, stride=stride, padding=kernel_size // 2)
+        self.pool = nn.MaxPool1d(kernel_size=kernel_size, stride=1, padding=kernel_size // 2)
+        self.bn = nn.BatchNorm1d(out_channels)
+    
+    def forward(self, x: torch.Tensor):
+        output = self.cnn(x)
+        output = self.pool(output)
+        output = self.bn(output)
+        return output
+
+
+class CNNFilter(nn.Module):
+    # 定义CNN滤波器
+    def __init__(self, in_channels: int = 8, kernel_size: int = 7) -> None:
+        super(CNNFilter, self).__init__()
+        self.cnn1 = CNNLayer(in_channels, 1, kernel_size, stride=3)
+        self.cnn2 = CNNLayer(1, 1, kernel_size, stride=1)
+    
+    def forward(self, x: torch.Tensor):
+        output = self.cnn1(x)
+        output = self.cnn2(output)
+        output = output.squeeze(1)
+        return output
+
+
+# LSTM编码器
+class LSTMEncoder(nn.Module):
+    # 定义LSTM编码器
+    def __init__(self, input_dim: int = 768, target_dim: int = 128) -> None:
+        super(LSTMEncoder, self).__init__()
+        self.lstm = nn.LSTM(input_dim, target_dim, batch_first=True, bidirectional=True)  # 输出维度是128*2=256
+    
+    def forward(self, x: torch.Tensor):
+        seq, (h, c) = self.lstm(x)
+        return torch.cat([h[0], h[1]], dim=1)

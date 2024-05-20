@@ -112,7 +112,7 @@ def extract_aac_features(peptides: pd.Series) -> pd.DataFrame:
 # 读取所有特征
 def load_features() -> pd.DataFrame:
     # 一次性加载所有特征，返回DataFrame
-    peptides = pd.read_csv("./Cache/peptides.csv")
+    peptides = pd.read_csv("./Cache/peptides.csv", header=None)
     binary = load_sparse_matrix("./Cache/binary.npz")
     cksaap = load_sparse_matrix("./Cache/cksaap.npz")
     aac = load_sparse_matrix("./Cache/aac.npz")
@@ -123,6 +123,32 @@ def load_features() -> pd.DataFrame:
     knn = pd.concat(knn, axis=1)
 
     features = pd.concat([peptides, binary, cksaap, aac, knn], axis=1)  # 仅使用部分特征
+    return features
+
+
+# 读取所有特征
+def load_features_by_name(features_name: tuple) -> pd.DataFrame:
+    # 一次性加载所有特征，返回DataFrame
+    peptides = pd.read_csv("./Cache/peptides.csv", header=None)
+    binary = load_sparse_matrix("./Cache/binary.npz")
+    cksaap = load_sparse_matrix("./Cache/cksaap.npz")
+    aac = load_sparse_matrix("./Cache/aac.npz")
+    knn = []
+    for i in list(range(1, 4)) + list(range(7, 18)) + [19, 20, 24, 25]:  # 加载所有的knn特征
+        mmp_knn = np.load("./Data/MMP{}_no_repeat.npy".format(i))
+        knn.append(pd.DataFrame(mmp_knn))
+    knn = pd.concat(knn, axis=1)
+
+    selected_features = [peptides]
+    if "binary" in features_name:
+        selected_features.append(binary)
+    if "cksaap" in features_name:
+        selected_features.append(cksaap)
+    if "aac" in features_name:
+        selected_features.append(aac)
+    if "knn" in features_name:
+        selected_features.append(knn)
+    features = pd.concat(selected_features, axis=1)  # 仅使用部分特征
     return features
 
 
