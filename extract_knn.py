@@ -24,7 +24,7 @@ train_idx = pd.read_csv("Cache/train_indices.csv", header=None).to_numpy(dtype=i
 
 df = pd.read_csv("Data/processed_peptides10.csv", sep=',')
 
-merops_df = pd.read_csv("Data/MMP3_unique_sequence.csv", header=None)
+merops_df = pd.read_csv("Data/mmp3_unique_sequence.csv", header=None)
 
 # df = df.loc[train_idx]
 
