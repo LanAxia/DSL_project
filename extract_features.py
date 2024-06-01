@@ -153,21 +153,21 @@ def load_features_by_name(features_name: tuple) -> pd.DataFrame:
     return features
 
 
-# 读取所有待预测数据的特征
+# load features (merops dataset)
 def load_pred_features(mmp: int) -> pd.DataFrame:
-    # 一次性加载所有特征，返回DataFrame
+    # load all the features at one time
     mmp_peptides = pd.read_csv("./Data/MMP{}_unique_sequence.csv".format(mmp), header=None).iloc[:, 0]
 
     binary = extract_binary_features(mmp_peptides).iloc[:, 1:]
     cksaap = extract_cksaap_features(mmp_peptides).iloc[:, 1:]
     aac = extract_aac_features(mmp_peptides)
-    knn = []  # 这部分代码没写完
-    for i in list(range(1, 4)) + list(range(7, 18)) + [19, 20, 24, 25]:  # 加载所有的knn特征
+    knn = []
+    for i in list(range(1, 4)) + list(range(7, 18)) + [19, 20, 24, 25]:  # load all KNN features
         mmp_knn = np.load("./Data/knn_MMP{}_MMP{}_prediction.npy".format(mmp, i))
         knn.append(pd.DataFrame(mmp_knn))
     knn = pd.concat(knn, axis=1)
 
-    features = pd.concat([mmp_peptides, binary, cksaap, aac, knn], axis=1)  # 仅使用部分特征
+    features = pd.concat([mmp_peptides, binary, cksaap, aac, knn], axis=1)  # return DataFrame
     return features
 
 
@@ -195,11 +195,11 @@ if __name__ == "__main__":
 
     # extract binary features and save
     binary_df = extract_binary_features(peptides)
-    save_sparse_matrix(binary_df.iloc[:, 1:], './Cache/binary.npz')  # 不保存第一列
+    save_sparse_matrix(binary_df.iloc[:, 1:], './Cache/binary.npz')
 
     # extract cksaap features and save
     cksaap_df = extract_cksaap_features(peptides)
-    save_sparse_matrix(cksaap_df.iloc[:, 1:], './Cache/cksaap.npz')  # 不保存第一列
+    save_sparse_matrix(cksaap_df.iloc[:, 1:], './Cache/cksaap.npz')
 
     # extract AAC features and save
     aac_df = extract_aac_features(peptides)
