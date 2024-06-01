@@ -228,11 +228,11 @@ if __name__ == "__main__":
 
     # extract binary features and save (for merops data)
     pred_binary_df = extract_binary_features(pred_peptides)
-    save_sparse_matrix(pred_binary_df.iloc[:, 1:], './Cache/pred_binary.npz')  # 不保存第一列
+    save_sparse_matrix(pred_binary_df.iloc[:, 1:], './Cache/pred_binary.npz')
 
     # extract cksaap features and save (for merops data)
     pred_cksaap_df = extract_cksaap_features(pred_peptides)
-    save_sparse_matrix(pred_cksaap_df.iloc[:, 1:], './Cache/pred_cksaap.npz')  # 不保存第一列
+    save_sparse_matrix(pred_cksaap_df.iloc[:, 1:], './Cache/pred_cksaap.npz')
 
     # extract aac features and save (for merops data)
     pred_aac_df = extract_aac_features(pred_peptides)
