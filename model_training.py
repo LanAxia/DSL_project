@@ -20,7 +20,6 @@ from extract_features import load_features, load_features_by_name
 from models import BioNN, BioDeepNN, BioResNet
 
 # define constants
-SAVE = True
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
 

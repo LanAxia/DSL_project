@@ -155,12 +155,12 @@ if __name__ == "__main__":
 
     # validate FC (2 layers) model
     bionn_validation = validate_dl(BioNN, peptides, features_x, all_mmp_y)
-    np.save("./Result/BioNN_validation.npy", bionn_validation)
+    # np.save("./Result/BioNN_validation.npy", bionn_validation)
 
     # validate FC (4 layers) model
     biodnn_validation = validate_dl(BioDeepNN, peptides, features_x, all_mmp_y)
-    np.save("./Result/BioDNN_validation.npy", biodnn_validation)
+    # np.save("./Result/BioDNN_validation.npy", biodnn_validation)
 
     # validate ResNet model
     biores_validation = validate_dl(BioResNet, peptides, features_x, all_mmp_y)
-    np.save("./Result/BioRes_validation.npy", biores_validation)
+    # np.save("./Result/BioRes_validation.npy", biores_validation)
