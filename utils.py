@@ -10,6 +10,10 @@ bl62 = blosum.BLOSUM(62)
 mmp_family = ['M10.001', 'M10.003', 'M10.005', 'M10.008', 'M10.002', 'M10.004', 'M10.006','M10.007','M10.009','M10.013'
     ,'M10.014','M10.015','M10.016','M10.017','M10.021','M10.019','M10.024']
 
+valid_amino = ['-', 'Ala', 'Arg', 'Asn', 'Asp', 'Cys', 'Glu', 'Gln', 'Gly', 'His', 'Ile',
+               'Leu', 'Lys', 'Met', 'Phe', 'Pro', 'Ser', 'Thr', 'Trp', 'Tyr', 'Val']
+
+
 def three_to_one(three_letter_seq):
     # Dictionary to map three-letter codes to one-letter codes
     three_to_one_dict = {
@@ -38,7 +42,7 @@ def calculate_blosum62(sequence1, sequence2):
     return score
 
 
-def preprocess_merops():
+def preprocess_merops(filter_invalid=True):
     substrate = pd.read_csv('Data/txtdata/Substrate_search.txt', sep='\t', header=None, encoding='utf8', low_memory=False,
                                 dtype=str)
     substrate = substrate.iloc[:, [1] + list(range(4, 12))].replace("'", "", regex=True)
@@ -48,9 +52,10 @@ def preprocess_merops():
         sequence = []
         valid_sequence = True
         for j in range(4, 12):
-            if row[j] not in valid_amino:
-                valid_sequence = False
-                break
+            if filter_invalid:
+                if row[j] not in valid_amino:
+                    valid_sequence = False
+                    break
             sequence.append(row[j])
         if not valid_sequence:
             continue
