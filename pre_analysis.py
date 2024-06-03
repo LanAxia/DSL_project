@@ -9,8 +9,68 @@ from collections import Counter
 from utils import *
 
 
-def main():
-    """file_path = "Data/processed_peptides10.csv"
+def corr_blosum_cleavage():
+    """
+    Generate the Figure 2: Relationship between average blosum score and cleavage correlation for two proteases
+    """
+    cleave_scores = pd.read_csv("Data/processed_peptides10.csv")
+    cleave_scores = cleave_scores.iloc[:, 1:].values
+    row_norms = np.linalg.norm(cleave_scores, axis=1, keepdims=True)
+    cleave_scores = cleave_scores / row_norms
+    correlation_matrix = np.dot(cleave_scores, cleave_scores.T)
+
+    file_path = "Data/blosum_no_repeat.npy"
+    if os.path.exists(file_path):
+        print("Blosum scores already calculated")
+        blosum_scores = np.load("Data/blosum_no_repeat.npy")
+        print("Finish load")
+    else:
+        print("Need to calculate blosum scores")
+        calculate_all_blosum()
+        print("Finish calculation")
+        blosum_scores = np.load("Data/blosum_no_repeat.npy")
+        print("Finish load")
+
+    num_peptides = blosum_scores.shape[0]
+
+    upper_tri_indices = np.triu_indices(num_peptides, k=1)
+
+    correlation_1d = correlation_matrix[upper_tri_indices]
+    blosum_scores_1d = blosum_scores[upper_tri_indices]
+    del blosum_scores
+    del correlation_matrix
+
+    blosum_min = -10
+    blosum_max = 43
+
+    blosum_avg = np.zeros((blosum_max - blosum_min + 1,))
+    corr_avg = np.zeros((blosum_max - blosum_min + 1,))
+    corr_std = np.zeros((blosum_max - blosum_min + 1,))
+    corr_num = np.zeros((blosum_max - blosum_min + 1,))
+
+    for i, score in tqdm(enumerate(range(blosum_min, blosum_max + 1))):
+        corr_avg[i] = np.mean(correlation_1d[blosum_scores_1d == score])
+        corr_std[i] = np.std(correlation_1d[blosum_scores_1d == score])
+        corr_num[i] = correlation_1d[blosum_scores_1d == score].shape[0]
+
+    plt.plot([i for i in range(blosum_min, blosum_max + 1)], corr_avg)
+    plt.fill_between([i for i in range(blosum_min, blosum_max + 1)], corr_avg - corr_std, corr_avg + corr_std,
+                     color='grey', alpha=0.5)
+    plt.xlabel("blosum score", fontsize=16)
+    plt.ylabel("cleavage pattern correlation", fontsize=16)
+    plt.xticks(fontsize=16)
+    plt.yticks(fontsize=16)
+    plt.grid(True, which='both')
+
+    plt.savefig("Figures/Figure2.pdf")
+    plt.close()
+
+
+def corr_MMP():
+    """
+    Generate the Figure 3: Correlation of cleavage efficiency between different MMP family proteases
+    """
+    file_path = "Data/processed_peptides10.csv"
     cleavage_score = pd.read_csv(file_path)
     proteases = cleavage_score.columns.to_list()[1:]
     scores = cleavage_score[proteases].values
@@ -20,48 +80,24 @@ def main():
     plt.colorbar()
     plt.xticks(np.arange(len(proteases)), labels=proteases, rotation=45, ha='center')
     plt.yticks(np.arange(len(proteases)), labels=proteases)
-    plt.show()"""
-    a = 1
+    plt.tight_layout()
+    plt.savefig("Figures/Figure3.pdf")
+    plt.close()
 
-    """file_path = "Data/prot_sequences_df.csv"
+
+def corr_family():
+    """
+    Generate the Figure 1: Average blosum62 score between peptides that can be cleaved by different proteases
+    """
+    file_path = "Data/prot_sequences_df.csv"
     if os.path.exists(file_path):
         print("Preprocessed Merops data exists, load the file")
         prot_sequences_df = pd.read_csv("Data/prot_sequences_df.csv")
-    else:"""
-    """print("Preprocessing Merops data")
-    prot_sequences_df = preprocess_merops(False)
-    print("Finish preprocess")"""
-
-    human_protease = pd.read_csv("Data/human_protease.txt", header=None).iloc[:, 0].values.tolist()
-    print("Load human proteases")
-
-    proteases = pd.read_csv('Data/txtdata/Substrate_search.txt', sep='\t', header=None, encoding='utf8', low_memory=False,
-                                dtype=str).iloc[:, 1].tolist()
-
-    counts = Counter(proteases)
-
-    counts = dict(counts)
-    counts = np.sort(list(counts.values()))
-    plt.scatter(np.arange(counts.shape[0]), counts)
-
-    plt.show()
-
-    unique_prot = [p for p in prot_sequences_df["prot"].unique().tolist() if p in human_protease]
-
-    print("Extract peptides of each Merops protease")
-    prot_peptides_dict, prot_peptides_num = extract_peptides(unique_prot, prot_sequences_df, 0)
-    a = 1
-
-    """file_path = "Data/prot_sequences_df.csv"
-    if os.path.exists(file_path):
-        print("Preprocessed Merops data exists, load the file")
-        prot_sequences_df = pd.read_csv("Data/prot_sequences_df.csv")
+        print("Finish load")
     else:
         print("Preprocessing Merops data")
         prot_sequences_df = preprocess_merops()
         print("Finish preprocess")
-
-    # prot_sequences_df = prot_sequences_df.sample(frac=0.1)
 
     human_protease = pd.read_csv("Data/human_protease.txt", header=None).iloc[:, 0].values.tolist()
     print("Load human proteases")
@@ -81,8 +117,8 @@ def main():
 
     peptides_all = list(set(sum(family_peptides_dict.values(), [])))
 
-    if os.path.exists("Data/peptides_all_blosum.csv"):
-        peptides_all_blosum = np.load("Data/peptides_all_blosum.csv")
+    if os.path.exists("Data/peptides_all_blosum.npy"):
+        peptides_all_blosum = np.load("Data/peptides_all_blosum.npy")
     else:
         peptides_all_blosum = np.zeros((len(peptides_all), len(peptides_all)))
 
@@ -99,26 +135,6 @@ def main():
     unique_prot_valid = list(prot_peptides_dict.keys())
     unique_prot_valid.sort()
     #peptides_all_blosum = pd.DataFrame(data=peptides_all_blosum, index=peptides_all, columns=peptides_all)
-
-    if os.path.exists("Data/family_corr.csv"):
-        family_corr = pd.read_csv("Data/family_corr.csv", index_col=0)
-    else:
-        family_corr = np.zeros((len(families), len(families)))
-
-        for i in range(len(families)):
-            peptides_list_1 = family_peptides_dict[families[i]]
-            for j in range(i, len(families)):
-                peptides_list_2 = family_peptides_dict[families[j]]
-                blosum_scores_this = peptides_all_blosum.loc[peptides_list_1, :].loc[:, peptides_list_2].values
-                family_corr[i, j] = np.mean(blosum_scores_this)
-                family_corr[j, i] = np.mean(blosum_scores_this)
-
-        family_corr = pd.DataFrame(data=family_corr, index=families, columns=families)
-        family_corr.to_csv("Data/family_corr.csv")
-
-    """"""plt.imshow(family_corr.values, cmap='viridis')
-    plt.colorbar()
-    plt.show()""""""
 
     if os.path.exists("Data/protease_corr.csv"):
         protease_corr = pd.read_csv("Data/protease_corr.csv", index_col=0)
@@ -143,9 +159,67 @@ def main():
     plt.colorbar()
     plt.xticks([])
     plt.yticks([])
+    plt.savefig("fig/Figure1.pdf")
+    plt.close()
+
+
+def calculate_all_blosum():
+    sequences = pd.read_csv("Data/processed_peptides10.csv").iloc[:, 0].tolist()
+    blosum_all = np.zeros((len(sequences), len(sequences)), dtype=int)
+
+    print("\nStart to calculate blosum scores between every two peptides.")
+    print("It may take 10 minutes to half an hour.")
+    for i in tqdm(range(len(sequences))):
+        s1 = sequences[i]
+        for j in range(i, len(sequences)):
+            s2 = sequences[j]
+            bl_score = calculate_blosum62(s1, s2)
+            blosum_all[i, j] = bl_score
+            blosum_all[j, i] = bl_score
+
+    np.save("Data/blosum_no_repeat.npy", blosum_all)
+
+
+def main():
+    # generate the Figure 1
+    print("------------generate Figure1-------------")
+    corr_family()
+    # generate the Figure 2
+    print("------------generate Figure2-------------")
+    corr_blosum_cleavage()
+    # generate the Figure 3
+    print("------------generate Figure3-------------")
+    corr_MMP()
+
+    # file_path = "Data/prot_sequences_df.csv"
+    """if os.path.exists(file_path):
+        print("Preprocessed Merops data exists, load the file")
+        prot_sequences_df = pd.read_csv("Data/prot_sequences_df.csv")
+    else:"""
+    """print("Preprocessing Merops data")
+    prot_sequences_df = preprocess_merops(False)
+    print("Finish preprocess")"""
+
+    """human_protease = pd.read_csv("Data/human_protease.txt", header=None).iloc[:, 0].values.tolist()
+    print("Load human proteases")
+
+    proteases = pd.read_csv('Data/txtdata/Substrate_search.txt', sep='\t', header=None, encoding='utf8', low_memory=False,
+                                dtype=str).iloc[:, 1].tolist()
+
+    counts = Counter(proteases)
+
+    counts = dict(counts)
+    counts = np.sort(list(counts.values()))
+    plt.scatter(np.arange(counts.shape[0]), counts)
+
     plt.show()"""
 
+    """unique_prot = [p for p in prot_sequences_df["prot"].unique().tolist() if p in human_protease]
+
+    print("Extract peptides of each Merops protease")
+    prot_peptides_dict, prot_peptides_num = extract_peptides(unique_prot, prot_sequences_df, 0)
     a = 1
+    a = 1"""
 
 
 
