@@ -59,6 +59,11 @@ NFLHLLML,19.0,17.0,15.6,1.88,0.6699999999999999,1.21
 
 ### predict pipeline
 #### models training
+Before intrducing how to train the model by yourself, we provide the model trained by us here. 
+You can just copy them into the same folders and use the model. 
+
+Pre-trained models are [here](https://drive.google.com/file/d/1ymHgLnmE_SwNMVL1Hpq4a9YDuDGolJIT/view?usp=sharing).
+
 #### use models trained by us
 To save the time of training the models again, the result from step 1 is already saved in ```Result/pred_mmp3.npy``` and ```Result/pred_mmp3.npy```, for mmp9 and mmp3 respectively.
 You can just run ```predict_pipeline.py``` to get the final result. The final result will be saved in ```Result/mmp9_predict.csv``` and ```Result/mmp9_predict.csv```. 
