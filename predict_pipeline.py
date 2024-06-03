@@ -5,7 +5,7 @@ import pandas as pd
 from utils import *
 
 
-def stage2(target_peptides: list, pipeline_type=0):
+def stage2(target_peptides: list, target_protease, pipeline_type=0):
     file_path = "Data/prot_sequences_df.csv"
     if os.path.exists(file_path):
         print("Preprocessed Merops data exists, load the file")
@@ -61,24 +61,26 @@ def stage2(target_peptides: list, pipeline_type=0):
     else:
         target_final_df.to_csv(f"Data/{target_protease}_predict.csv")
 
-    return target_final_df
+
+def main():
+    for target_protease in ["mmp3", "mmp9"]:
+        if target_protease == "mmp3":
+            mmp_index = 2
+        elif target_protease == "mmp9":
+            mmp_index = 5
+
+        precision_threshold = 1.65
+        recall_threshold = 0.0
+
+        input_peptides = pd.read_csv(f'Data/{target_protease}_unique_sequence.csv', header=None)
+        mmp_scores = np.load(f'Result/pred_{target_protease}.npy')
+        valid_mask = (np.max(np.delete(mmp_scores, mmp_index, axis=1), axis=1) <= recall_threshold)
+
+        valid_peptides = input_peptides[valid_mask].values.squeeze().tolist()
+
+        stage2(valid_peptides, target_protease, 1)
 
 
+if __name__ == "__main__":
+    main()
 
-target_protease = "mmp9"
-if target_protease == "mmp3":
-    mmp_index = 2
-elif target_protease == "mmp9":
-    mmp_index = 5
-
-precision_threshold = 1.65
-recall_threshold = 0.0
-
-input_peptides = pd.read_csv(f'Data/{target_protease}_unique_sequence.csv', header=None)
-mmp_scores = np.load(f'Result/pred_{target_protease}.npy')
-valid_mask = (np.max(np.delete(mmp_scores, mmp_index, axis=1), axis=1) <= recall_threshold)
-
-valid_peptides = input_peptides[valid_mask].values.squeeze().tolist()
-
-final_result = stage2(valid_peptides, 1)
-a = 1

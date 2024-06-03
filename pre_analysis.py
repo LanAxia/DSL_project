@@ -191,38 +191,6 @@ def main():
     print("------------generate Figure3-------------")
     corr_MMP()
 
-    # file_path = "Data/prot_sequences_df.csv"
-    """if os.path.exists(file_path):
-        print("Preprocessed Merops data exists, load the file")
-        prot_sequences_df = pd.read_csv("Data/prot_sequences_df.csv")
-    else:"""
-    """print("Preprocessing Merops data")
-    prot_sequences_df = preprocess_merops(False)
-    print("Finish preprocess")"""
-
-    """human_protease = pd.read_csv("Data/human_protease.txt", header=None).iloc[:, 0].values.tolist()
-    print("Load human proteases")
-
-    proteases = pd.read_csv('Data/txtdata/Substrate_search.txt', sep='\t', header=None, encoding='utf8', low_memory=False,
-                                dtype=str).iloc[:, 1].tolist()
-
-    counts = Counter(proteases)
-
-    counts = dict(counts)
-    counts = np.sort(list(counts.values()))
-    plt.scatter(np.arange(counts.shape[0]), counts)
-
-    plt.show()"""
-
-    """unique_prot = [p for p in prot_sequences_df["prot"].unique().tolist() if p in human_protease]
-
-    print("Extract peptides of each Merops protease")
-    prot_peptides_dict, prot_peptides_num = extract_peptides(unique_prot, prot_sequences_df, 0)
-    a = 1
-    a = 1"""
-
-
-
 
 if __name__ == "__main__":
     main()

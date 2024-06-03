@@ -10,20 +10,41 @@ import matplotlib.pyplot as plt
 from utils import *
 
 
-
-valid_amino = ['-', 'Ala', 'Arg', 'Asn', 'Asp', 'Cys', 'Glu', 'Gln', 'Gly', 'His', 'Ile',
-               'Leu', 'Lys', 'Met', 'Phe', 'Pro', 'Ser', 'Thr', 'Trp', 'Tyr', 'Val']
-
-
-
-
-
 mmp_family = ['M10.001', 'M10.003', 'M10.005', 'M10.008', 'M10.002', 'M10.004', 'M10.006','M10.007','M10.009','M10.013'
     ,'M10.014','M10.015','M10.016','M10.017','M10.021','M10.019','M10.024']
 target_protease = "MMP3"
 
 
-def main():
+def step1(protease):
+    df = pd.read_csv("Data/processed_peptides10.csv", sep=',')
+
+    protease = 'MMP3'
+    cleave_threshold = 1.65
+    margin_min = 0.4
+
+    df = df[df[protease] > cleave_threshold]
+    target_scores = df[protease].values
+    df = df.drop(protease, axis=1)
+    other_scores = df.iloc[:, 1:].values
+    sequences = df['Sequence'].to_list()
+
+    margins = target_scores - np.max(other_scores, axis=1)
+
+    margins_df = pd.DataFrame({'Sequence': sequences,
+                               'target scores': target_scores,
+                               'margins': margins,
+                               'maximum other scores': np.max(other_scores, axis=1)
+                               })
+
+    margins_df = margins_df.sort_values('margins', ascending=False).reset_index(drop=True)
+
+    margins_df = margins_df[
+        (margins_df['maximum other scores'] < cleave_threshold) & (margins_df['margins'] > margin_min)].reset_index(
+        drop=True)
+    margins_df.to_csv(f"Data/{protease}_search_step1.csv", index=None)
+
+
+def step2(target_protease):
     file_path = "Data/prot_sequences_df.csv"
     if os.path.exists(file_path):
         print("Preprocessed Merops data exists, load the file")
@@ -36,19 +57,17 @@ def main():
     human_protease = pd.read_csv("Data/human_protease.txt", header=None).iloc[:, 0].values.tolist()
     print("Load human proteases")
 
-    target_peptides_df = pd.read_csv(f"Data/{target_protease}_filtered_mmp.csv")
+    target_peptides_df = pd.read_csv(f"Data/{target_protease}_search_step1.csv")
     target_peptides_df.set_index('Sequence', inplace=True)
     target_peptides = target_peptides_df.index.tolist()
 
     print("Load targeted peptides from stage 1")
 
-    # unique_prot = [p for p in prot_sequences_df["prot"].unique().tolist()]
-    unique_prot = [p for p in prot_sequences_df["prot"].unique().tolist() if (p not in mmp_family) & (p in human_protease)]
+    unique_prot = [p for p in prot_sequences_df["prot"].unique().tolist() if
+                   (p not in mmp_family) & (p in human_protease)]
 
     print("Extract peptides of each Merops protease")
     prot_peptides_dict, prot_peptides_num = extract_peptides(unique_prot, prot_sequences_df, 0)
-    # plt.plot(prot_peptides_num)
-    # plt.show()
 
     mmp_merops_compare_top1 = pd.DataFrame(columns=target_peptides, index=unique_prot)
     mmp_merops_compare_top5 = pd.DataFrame(columns=target_peptides, index=unique_prot)
@@ -83,10 +102,15 @@ def main():
     target_final_df = pd.merge(target_final_df, target_peptides_df, left_index=True, right_index=True)
     target_final_df = target_final_df.sort_values('top1')
 
-    target_final_df.to_csv(f"Data/final_{target_protease}.csv")
-    a = 1
+    target_final_df.to_csv(f"Result/{target_protease}_search.csv")
 
-    a = 1
+
+def main():
+
+    for protease in ["MMP3", "MMP9"]:
+        step1(protease)
+
+        step2(protease)
 
 
 if __name__ == "__main__":
