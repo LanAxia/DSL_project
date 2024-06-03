@@ -6,7 +6,17 @@
 
 ## Quick Usage
 
+### pre-analysis
+In our report, we did some analysis before introducing our methods. There are three figures in this section in the report. 
+Run ```pre_analysis.py``` to reproduce these three figures. Results will be saved in folder ```Figures```.
 
+The data ```Data/processed_peptides10.csv``` and ```Data/prot_sequences_df.csv``` are already in ```Data``` folder. 
+All blosum scores between every two peptides in the second dataset ```blosum_no_repeat.npy``` need to be calculated locally, because the file is too huge.
+After calculation , it will also be saved in ```Data``` folder.
+
+### search pipeline
+
+### predict pipeline
 
 ## Files Overview
 
