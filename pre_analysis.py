@@ -13,6 +13,7 @@ def corr_blosum_cleavage():
     """
     Generate the Figure 2: Relationship between average blosum score and cleavage correlation for two proteases
     """
+    # load the cleavage scores and calculate the correlation
     cleave_scores = pd.read_csv("Data/processed_peptides10.csv")
     cleave_scores = cleave_scores.iloc[:, 1:].values
     row_norms = np.linalg.norm(cleave_scores, axis=1, keepdims=True)
@@ -48,20 +49,19 @@ def corr_blosum_cleavage():
     corr_std = np.zeros((blosum_max - blosum_min + 1,))
     corr_num = np.zeros((blosum_max - blosum_min + 1,))
 
+    # calculate the average correlation for every blosum scores between ``blosum_min`` and ``blosum_max``
     for i, score in tqdm(enumerate(range(blosum_min, blosum_max + 1))):
         corr_avg[i] = np.mean(correlation_1d[blosum_scores_1d == score])
         corr_std[i] = np.std(correlation_1d[blosum_scores_1d == score])
         corr_num[i] = correlation_1d[blosum_scores_1d == score].shape[0]
 
     plt.plot([i for i in range(blosum_min, blosum_max + 1)], corr_avg)
-    plt.fill_between([i for i in range(blosum_min, blosum_max + 1)], corr_avg - corr_std, corr_avg + corr_std,
-                     color='grey', alpha=0.5)
     plt.xlabel("blosum score", fontsize=16)
     plt.ylabel("cleavage pattern correlation", fontsize=16)
     plt.xticks(fontsize=16)
     plt.yticks(fontsize=16)
     plt.grid(True, which='both')
-
+    plt.tight_layout()
     plt.savefig("Figures/Figure2.pdf")
     plt.close()
 
@@ -115,8 +115,10 @@ def corr_family():
     for family in families:
         family_peptides_dict[family] = list(set(family_peptides_dict[family]))
 
+    # extract all peptides
     peptides_all = list(set(sum(family_peptides_dict.values(), [])))
 
+    # calculate or load all blosum scores between every two peptides
     if os.path.exists("Data/peptides_all_blosum.npy"):
         peptides_all_blosum = np.load("Data/peptides_all_blosum.npy")
     else:
@@ -134,8 +136,8 @@ def corr_family():
 
     unique_prot_valid = list(prot_peptides_dict.keys())
     unique_prot_valid.sort()
-    #peptides_all_blosum = pd.DataFrame(data=peptides_all_blosum, index=peptides_all, columns=peptides_all)
 
+    # calculate the average blosum scores between every two proteases
     if os.path.exists("Data/protease_corr.csv"):
         protease_corr = pd.read_csv("Data/protease_corr.csv", index_col=0)
     else:
@@ -159,7 +161,7 @@ def corr_family():
     plt.colorbar()
     plt.xticks([])
     plt.yticks([])
-    plt.savefig("fig/Figure1.pdf")
+    plt.savefig("Figures/Figure1.pdf")
     plt.close()
 
 
