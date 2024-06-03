@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 A01.003
 A01.004
 A01.007
@@ -1095,3 +1096,1137 @@ S54.951
 S54.952
 S54.953
 S54.955
+=======
+Clan	Family	MEROPS ID	Peptidase or homologue (subtype)	MERNUM	Gene	Link	Locus	Megabases
+AA	A1	A01.003	gastricsin	MER0000894	PGC	5225	6p21.3-p21.1	
+AA	A1	A01.004	BACE1 g.p. (Homo sapiens)	MER0005870	BACE1	23621	11q23.3-q24.1	
+AA	A1	A01.007	renin	MER0000917	REN	5972	1q32	
+AA	A1	A01.009	cathepsin D	MER0000911	CTSD	1509	11p15.5	
+AA	A1	A01.010	cathepsin E	MER0000944	CTSE	1510	1q31	
+AA	A1	A01.041	BACE2 g.p. (Homo sapiens)	MER0005534	BACE2	25825	21pter-qter	
+AA	A1	A01.046	napsin A	MER0004981	NAPSA	9476	19q13.33	
+AA	A1	A01.057	Mername-AA034 peptidase	MER0014038			1q23.3-24.3	
+AA	A1	A01.070	pepsin A4	MER0037290	PGA4	5221	11q13	
+AA	A1	A01.071	pepsin A5 (Homo sapiens)	MER0037291	PGA5	5222	11q13	
+AA	A1	A01.083	hCG1733572 (Homo sapiens)-type putative peptidase	MER0107386				
+AA	A1	A01.A96	hCG39993 g.p. (Homo sapiens)	MER0181559				
+AA	A1	A01.P01	napsin B pseudogene	MER0004982	NAPSB	256236	19q13.33	
+AA	A1	A01.P02	CYMP g.p. (Homo sapiens)	MER0002929	CYMP	643160	1	
+AA	A2	A02.010	mouse mammary tumor virus retropepsin	MER0048030				
+AA	A2	A02.011	human endogenous retrovirus K retropepsin	MER0047463			4	
+AA	A2	A02.011	human endogenous retrovirus K retropepsin	MER0047534			5	
+AA	A2	A02.011	human endogenous retrovirus K retropepsin	MER0000968			7	
+AA	A2	A02.019	multiple-sclerosis-associated retrovirus retropepsin	MER0047079			16	
+AA	A2	A02.019	multiple-sclerosis-associated retrovirus retropepsin	MER0047124			7	
+AA	A2	A02.019	multiple-sclerosis-associated retrovirus retropepsin	MER0047145			2	
+AA	A2	A02.019	multiple-sclerosis-associated retrovirus retropepsin	MER0047162			5	
+AA	A2	A02.019	multiple-sclerosis-associated retrovirus retropepsin	MER0047244			15q21	
+AA	A2	A02.019	multiple-sclerosis-associated retrovirus retropepsin	MER0047264			11	
+AA	A2	A02.019	multiple-sclerosis-associated retrovirus retropepsin	MER0047396			2	
+AA	A2	A02.019	multiple-sclerosis-associated retrovirus retropepsin	MER0047403			3	
+AA	A2	A02.019	multiple-sclerosis-associated retrovirus retropepsin	MER0047457			4	
+AA	A2	A02.019	multiple-sclerosis-associated retrovirus retropepsin	MER0029837				
+AA	A2	A02.019	multiple-sclerosis-associated retrovirus retropepsin	MER0048013				
+AA	A2	A02.024	rabbit endogenous retrovirus endopeptidase	MER0043650				
+AA	A2	A02.053	S71-related human endogenous retropepsin	MER0001812				
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047046			9q32	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047052			6q21	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047076			X	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047080			19	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047089			14q24.3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047092				
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047093			7	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047097			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047099			7q31.3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047101				
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047102			17	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047107			7	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047108			4p16	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047109				
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047110			X	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047114			18	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047117			7	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047118				
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047121			X	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047122			4p16	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047126			Y	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047129			7	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047133				
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047134			12p13	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047135				
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047137			12p13	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047140			16	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047141			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047142			Y	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047148			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047149			3q26.2-27	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047151			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047154			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047155			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047156			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047157			19	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047159			19	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047160			19	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047161			19	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047163			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047166			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047171			18	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047173			18q12.1	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047174			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047183			Y	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047186			19	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047196			Y	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047198			10q22.3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047199			19	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047201			19	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047202				
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047203				
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047204			8	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047205			Y	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047206			Y	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047207			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047208			12p11.22	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047210			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047211			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047212			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047213			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047216			10p11.2-q21	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047218			8	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047221			15q21.3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047224			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047225			2q33	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047226			8	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047230			10	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047232			7	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047234			11p15.4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047236			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047238			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047239			7	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047240			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047242			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047243			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047249			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047251			18	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047252			12p13	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047253			19	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047111			17	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047255			15q15	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047260			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047263			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047265			12	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047266			10	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047267			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047268			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047269			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047272			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047088			Xq23	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047275			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047276			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047279			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047280			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047281			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047282			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047284			15q26.2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047285			11q11	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047289			16	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047290			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047291			8	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047294			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047295			3p	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047298			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047300			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047302			8	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047304			15q15	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047305			11p15	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047307			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047311			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047314			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047318			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047320			Xp	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047321			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047322			7	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047326			12	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047327			Xp	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047330			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047333			18	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047362			15	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047366			8	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047369			11	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047370			18	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047371			18	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047375			11p15.2-p15.1	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047376			15q22-q24	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047381			Xq23	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047384			7	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047385			12p13	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047388			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047389			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047391			12p	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047394			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047400			12	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047401			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047406			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047407			1	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047410			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047411			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047413			1q42.12	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047414			8	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047416			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047417			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047418			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047420			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047423			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047424			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047428			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047429			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047431			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047434			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047440			1p33-p32	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047442			11	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047445			18	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047449			8	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047450			8	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047455			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047458			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047459			8	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047468			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047469			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047470			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047476			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047478			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047479			X	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047488			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047489			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047490			2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047493			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047215			15q25	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047496			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047497			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047499			11p15.4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047502			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047504			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047511			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047513			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047514			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047515			11p11.2	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047516			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047520			X	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047533			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047537			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047559			12	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047569			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047570			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047583			16	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047584			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047603			4	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047604			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047606			12q15-q21	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047609			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047616			3	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047619			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047648			5	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047649			16	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0047662			12q24.11	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0048018				
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0048019				
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0048023			21q21	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0048037			8q21-q23	
+AA	A2	A02.055	RTVL-H-type putative peptidase	MER0015446		387590	22q11.2	
+AA	A2	A02.056	human endogenous retrovirus retropepsin homologue 1	MER0015479				
+AA	A2	A02.057	human endogenous retrovirus retropepsin homologue 2	MER0015481				
+AA	A2	A02.P01	endogenous retrovirus retropepsin pseudogene 1 (Homo sapiens chromosome 14)	MER0029977			14q32.33	
+AA	A2	A02.P02	endogenous retrovirus retropepsin pseudogene 2 (Homo sapiens chromosome 8)	MER0029665			8p21.3-p22	
+AA	A2	A02.P03	endogenous retrovirus retropepsin pseudogene 3 (Homo sapiens chromosome 17)	MER0002660			17	
+AA	A2	A02.P03	endogenous retrovirus retropepsin pseudogene 3 (Homo sapiens chromosome 17)	MER0030286				
+AA	A2	A02.P03	endogenous retrovirus retropepsin pseudogene 3 (Homo sapiens chromosome 17)	MER0047130			Y	
+AA	A2	A02.P03	endogenous retrovirus retropepsin pseudogene 3 (Homo sapiens chromosome 17)	MER0047144			2	
+AA	A2	A02.P04	endogenous retrovirus retropepsin pseudogene 5 (Homo sapiens chromosome 12)	MER0029664			12q13.1	
+AA	A2	A02.P05	endogenous retrovirus retropepsin pseudogene 6 (Homo sapiens chromosome 7)	MER0002094			7	
+AA	A2	A02.P06	endogenous retrovirus retropepsin pseudogene 7 (Homo sapiens chromosome 6)	MER0029776			6p21.3	
+AA	A2	A02.P07	endogenous retrovirus retropepsin pseudogene 8 (Homo sapiens chromosome Y)	MER0030291			Y	
+AA	A2	A02.P07	endogenous retrovirus retropepsin pseudogene 8 (Homo sapiens chromosome Y)	MER0047179			2	
+AA	A2	A02.P07	endogenous retrovirus retropepsin pseudogene 8 (Homo sapiens chromosome Y)	MER0047191			19	
+AA	A2	A02.P07	endogenous retrovirus retropepsin pseudogene 8 (Homo sapiens chromosome Y)	MER0047306			3	
+AA	A2	A02.P07	endogenous retrovirus retropepsin pseudogene 8 (Homo sapiens chromosome Y)	MER0047483			16	
+AA	A2	A02.P07	endogenous retrovirus retropepsin pseudogene 8 (Homo sapiens chromosome Y)	MER0048004				
+AA	A2	A02.P08	endogenous retrovirus retropepsin pseudogene 9 (Homo sapiens chromosome 19)	MER0029680			19	
+AA	A2	A02.P09	endogenous retrovirus retropepsin pseudogene 10 (Homo sapiens chromosome 12)	MER0002848			12q23.3	
+AA	A2	A02.P10	endogenous retrovirus retropepsin pseudogene 11 (Homo sapiens chromosome 17)	MER0004378			17	
+AA	A2	A02.P11	endogenous retrovirus retropepsin pseudogene 12 (Homo sapiens chromosome 11)	MER0003344			11q11	
+AA	A2	A02.P12	endogenous retrovirus retropepsin pseudogene 13 (Homo sapiens chromosome 2 and similar)	MER0029779			2	
+AA	A2	A02.P13	endogenous retrovirus retropepsin pseudogene 14 (Homo sapiens chromosome 2)	MER0029778			2	
+AA	A2	A02.P14	endogenous retrovirus retropepsin pseudogene 15 (Homo sapiens chromosome 4)	MER0047158			19	
+AA	A2	A02.P14	endogenous retrovirus retropepsin pseudogene 15 (Homo sapiens chromosome 4)	MER0003182			4	
+AA	A2	A02.P15	endogenous retrovirus retropepsin pseudogene 16	MER0047315			10	
+AA	A2	A02.P15	endogenous retrovirus retropepsin pseudogene 16	MER0030292			4	
+AA	A2	A02.P15	endogenous retrovirus retropepsin pseudogene 16	MER0047454			3p24.3	
+AA	A2	A02.P16	endogenous retrovirus retropepsin pseudogene 17 (Homo sapiens chromosome 8)	MER0005305			8	
+AA	A2	A02.P17	endogenous retrovirus retropepsin pseudogene 18 (Homo sapiens chromosome 4)	MER0030288			4	
+AA	A2	A02.P18	endogenous retrovirus retropepsin pseudogene 19 (Homo sapiens chromosome 16)	MER0001740			16p11.2	
+AA	A2	A02.P19	endogenous retrovirus retropepsin pseudogene 21 (Homo sapiens)	MER0004403				
+AA	A2	A02.P20	endogenous retrovirus retropepsin pseudogene 22 (Homo sapiens chromosome X)	MER0030287			Xq22.1	
+AA	A2	non-peptidase homologue	subfamily A2A non-peptidase homologues	MER0047233			16	
+AA	A2	non-peptidase homologue	subfamily A2A non-peptidase homologues	MER0047310			Y	
+AA	A2	non-peptidase homologue	subfamily A2A non-peptidase homologues	MER0047452			1q44	
+AA	A2	non-peptidase homologue	family A2 non-peptidase homologues	MER0047190			19	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047091			11	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047094			2	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047096			4	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047119			19	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047138			7	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047153			19	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047164			19	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047165			19	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047178			Y	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047200			19	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047222			11	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047231			16	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047241			4	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047256			8	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047257			8	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047271			12	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047313			3	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047332			3	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047386			5	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047390			2	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047402			3	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047405			8	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047412			3	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047446			8	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047477			4	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047480			3	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047492			2	
+AA	A2	unassigned	subfamily A2A unassigned peptidases	MER0047510			5	
+AA	A28	A28.001	DNA-damage inducible protein 1	MER0030109	DDI1	414301	11q22.3	
+AA	A28	A28.002	nuclear receptor-interacting protein 3	MER0427318	NRIP3		11p15.4	
+AA	A28	A28.003	DNA-damage inducible protein 2	MER0030188	DDI2	84301	1p36.21	
+AA	A28	A28.004	skin SASPase	MER0057097	ASPRV1	151516	2p13.3	
+AA	A28	A28.A10	nuclear receptor interacting protein 2	MER0427305	NRIP2		12p13.33	
+AD	A22	A22.001	presenilin 1	MER0005221	PSEN1	5663	14q24.3	
+AD	A22	A22.002	presenilin 2	MER0005223	PSEN2	5664	1q31-q42	
+AD	A22	A22.003	impas 1 peptidase	MER0019701	HM13	81502	20q11.21	
+AD	A22	A22.004	signal peptide peptidase-like protein 2B	MER0019715	SPPL2B	56928	19p13.3	
+AD	A22	A22.005	impas 2 peptidase	MER0019708		121665	12q24.31	
+AD	A22	A22.006	signal peptide peptidase-like protein 2C	MER0019712	SPPL2C	162540	17q21.31	
+AD	A22	A22.007	signal peptide peptidase-like protein 2A	MER0019711	SPPL2A	84888	15q21.2	
+AD	A22	A22.P01	possible family A22 pseudogene (Homo sapiens chromosome 18)	MER0029974			18	
+AD	A22	A22.P02	possible family A22 pseudogene (Homo sapiens chromosome 11)	MER0023159			11q12.2	
+CA	C1	C01.009	cathepsin V	MER0004437	CTSV	1515	9q22.2	
+CA	C1	C01.013	cathepsin X	MER0004508	CTSZ	1522	20q13	
+CA	C1	C01.018	cathepsin F	MER0004980	CTSF	8722	11q13.1-q13.3	
+CA	C1	C01.032	cathepsin L	MER0000622	CTSL1	1514	9q21-q22	
+CA	C1	C01.034	cathepsin S	MER0000633	CTSS	1520	1q21	
+CA	C1	C01.035	cathepsin O	MER0001690	CTSO	1519	4q31-q32	
+CA	C1	C01.036	cathepsin K	MER0000644	CTSK	1513	1q21	
+CA	C1	C01.037	cathepsin W	MER0003756	CTSW	1521	11q13.1	
+CA	C1	C01.040	cathepsin H	MER0000629	CTSH	1512	15q24-q25	
+CA	C1	C01.060	cathepsin B	MER0000686	CTSB	1508	8p22	
+CA	C1	C01.070	dipeptidyl-peptidase I	MER0001937	CTSC	1075	11q14.1-q14.3	
+CA	C1	C01.084	bleomycin hydrolase (animal)	MER0002481	BLMH	642	17q11.1-q11.2	
+CA	C1	C01.973	tubulointerstitial nephritis antigen	MER0016137	TINAG	27283	6p11.2-p12	
+CA	C1	C01.975	tubulointerstitial nephritis antigen-related protein	MER0021799	TINAGL1	64129	1p34.3	
+CA	C1	C01.P02	cathepsin L-like pseudogene 1 (Homo sapiens)	MER0002789	CTSL1P1	118945	10q	
+CA	C1	C01.P03	cathepsin B-like pseudogene (chromosome 4, Homo sapiens)	MER0029469			4	
+CA	C1	C01.P04	cathepsin B-like pseudogene (chromosome 1, Homo sapiens)	MER0029457			1q42.11	
+CA	C1	C01.P07	CTSLL2 g.p. (Homo sapiens)	MER0005210	CTSL1P2	1517	10q	
+CA	C1	C01.P08	CTSLL3 g.p. (Homo sapiens)	MER0005209	CTSL1P3	1518	10q22.3-q23.1	
+CA	C2	C02.001	calpain-1	MER0000770	CAPN1	823	11q13.1	
+CA	C2	C02.002	calpain-2	MER0000964	CAPN2	824	1q41	
+CA	C2	C02.004	calpain-3	MER0001446	CAPN3	825	15q15.1	
+CA	C2	C02.006	calpain-9	MER0004042	CAPN9	10753	1q42.2	
+CA	C2	C02.007	calpain-8	MER0021474	CAPN8	388743	1q41	
+CA	C2	C02.011	calpain-5	MER0002939	CAPN5	726	11q13.5	
+CA	C2	C02.013	calpain-11	MER0005844	CAPN11	11131	6p21.1	
+CA	C2	C02.017	calpain-12	MER0029889	CAPN12	147968	19q13.2	
+CA	C2	C02.018	calpain-10	MER0013510	CAPN10	11132	2q37.3	
+CA	C2	C02.020	calpain-13	MER0020139	CAPN13	92291	2p21-22	
+CA	C2	C02.021	calpain-14	MER0029744	CAPN14	440854	2p23.1-p21	
+CA	C2	C02.029	calpain (Plasmodium-type)	MER0005537	CAPN7	23473	3p25.1	
+CA	C2	C02.031	calpain 15 (Homo sapiens)	MER0004745	SOLH	6650	16p13.3	
+CA	C2	C02.971	calpamodulin	MER0000718	CAPN6	827	Xq23	
+CA	C2	C02.972	androglobin	MER0003201	ADGB	79747	6q24.2	
+CA	C101	C101.001	OTULIN peptidase	MER0491756	FAM105B	90268	5p15.2	
+CA	C101	C101.950	protein FAM105A	MER0267374	FAM105A		5p15.2	
+CA	C110	C110.001	kyphoscoliosis peptidase	MER0472837	KY		3q22.2	
+CA	C111	C111.001	coagulation factor XIIIa	MER0924172	F13A1		6p25.1	
+CA	C111	C111.002	transglutaminase 2	MER0661299	TGM2		20q11.23	
+CA	C111	C111.003	protein-glutamine gamma-glutamyltransferase E/3	MER1108659	TGM3		20p13	
+CA	C111	C111.004	protein-glutamine gamma-glutamyltransferase 4	MER0699420	TGM4		3p21.31	
+CA	C111	C111.005	protein-glutamine gamma-glutamyltransferase 5	MER1128637				
+CA	C111	C111.006	protein-glutamine gamma-glutamyltransferase 6	MER1124285	TGM6		20p13	
+CA	C111	C111.007	protein-glutamine gamma-glutamyltransferase Z/7	MER0758062				
+CA	C111	C111.008	protein-glutamine gamma-glutamyltransferase K/1	MER1153736	TGM1		14q12	
+CA	C111	C111.009	keratinocyte transglutaminase	MER0646134				
+CA	C111	C111.950	erythrocyte membrane protein band 4.2	MER0827882				
+CA	C115	C115.001	MINDY-1 protein	MER1054226	MINDY1		1q21.3	
+CA	C115	C115.002	FAM63B g.p. (Homo sapiens)	MER0902165	MINDY2		15q21.3-q22.1	
+CA	C12	C12.001	ubiquitinyl hydrolase-L1	MER0000832	UCHL1	7345	4p14	
+CA	C12	C12.003	ubiquitinyl hydrolase-L3	MER0000836	UCHL3	7347	13q21.2-q22.1	
+CA	C12	C12.004	ubiquitinyl hydrolase-BAP1	MER0003989	BAP1	8314	3p21.2-p21.31	
+CA	C12	C12.005	ubiquitinyl hydrolase-L5	MER0005539	UCHL5	51377	1q32	
+CA	C121	C121.001	MINDY-4 peptidase	MER1251425				
+CA	C121	C121.002	Probable ubiquitin carboxyl-terminal hydrolase MINDY-4	MER1251407				
+CA	C19	C19.001	ubiquitin-specific peptidase 5	MER0002066	USP5	8078	12p13	
+CA	C19	C19.009	ubiquitin-specific peptidase 6	MER0000863	USP32/USP6	9098	17q23.3	
+CA	C19	C19.010	ubiquitin-specific peptidase 4	MER0001795	USP4	7375	3p21.31	
+CA	C19	C19.011	ubiquitin-specific peptidase 8	MER0001884	USP8	9101	15q11.2-q21.1	
+CA	C19	C19.012	ubiquitin-specific peptidase 13	MER0002627	USP13	8975	3q26.2-q26.3	
+CA	C19	C19.013	ubiquitin-specific peptidase 2	MER0004834	USP2	9099	11q23.3	
+CA	C19	C19.014	ubiquitin-specific peptidase 11	MER0002693	USP11	8237	Xp11.23	
+CA	C19	C19.015	ubiquitin-specific peptidase 14	MER0002667	USP14	9097	18p11.32	
+CA	C19	C19.016	ubiquitin-specific peptidase 7	MER0002896	USP7	7874	16p13.3	
+CA	C19	C19.017	ubiquitin-specific peptidase 9X	MER0005877	USP9X	8239	Xp11.4	
+CA	C19	C19.018	ubiquitin-specific peptidase 10	MER0004439	USP10	9100	16q24.1	
+CA	C19	C19.019	ubiquitin-specific peptidase 1	MER0004978	USP1	7398	1p31.3-p32.1	
+CA	C19	C19.020	ubiquitin-specific peptidase 12	MER0005454	USP12	9959	5q33-q34	
+CA	C19	C19.021	ubiquitin-specific peptidase 16	MER0005493	USP16	10600	21q22.11	
+CA	C19	C19.022	ubiquitin-specific peptidase 15	MER0005427	USP15	9958	12q14	
+CA	C19	C19.023	ubiquitin-specific peptidase 17	MER0002900	USP17	391627	4p15	
+CA	C19	C19.024	ubiquitin-specific peptidase 19	MER0005428	USP19	10869	3p21.31	
+CA	C19	C19.025	ubiquitin-specific peptidase 20	MER0005494	USP20	10868	9q34.13	
+CA	C19	C19.026	ubiquitin-specific peptidase 3	MER0005513	USP3	9960	15q22.3	
+CA	C19	C19.028	ubiquitin-specific peptidase 9Y	MER0004314	USP9Y	8287	Yq11.2	
+CA	C19	C19.030	ubiquitin-specific peptidase 18	MER0005641	USP18	11274	22q11.21	
+CA	C19	C19.034	ubiquitin-specific peptidase 21	MER0006258	USP21	27005	1q22	
+CA	C19	C19.035	ubiquitin-specific peptidase 22	MER0012130	USP22	23326	17p13.2	
+CA	C19	C19.037	ubiquitin-specific peptidase 33	MER0014335	USP33	23032	1p31.1	
+CA	C19	C19.040	ubiquitin-specific peptidase 29	MER0012093	USP29	57663	19q13.43	
+CA	C19	C19.041	ubiquitin-specific peptidase 25	MER0011115	USP25	29761	21q11.2	
+CA	C19	C19.042	ubiquitin-specific peptidase 36	MER0014033	USP36	57602	17q25.3	
+CA	C19	C19.044	ubiquitin-specific peptidase 32	MER0014290	USP32/USP6	9098	17q23.3	
+CA	C19	C19.046	ubiquitin-specific peptidase 26 (Homo sapiens-type)	MER0014292	USP26	83844	Xq26.2	
+CA	C19	C19.047	ubiquitin-specific peptidase 24	MER0005706	USP24	23358	1p32.1	
+CA	C19	C19.048	ubiquitin-specific peptidase 42	MER0011852	USP42	84132	7p22.2	
+CA	C19	C19.052	ubiquitin-specific peptidase 46	MER0014629	USP46	64854	4q11	
+CA	C19	C19.053	ubiquitin-specific peptidase 37	MER0014633	USP37	57695	2q36.1	
+CA	C19	C19.054	ubiquitin-specific peptidase 28	MER0014634	USP28	57646	11q23	
+CA	C19	C19.055	ubiquitin-specific peptidase 47	MER0014636	USP47	55031	11p15.2	
+CA	C19	C19.056	ubiquitin-specific peptidase 38	MER0014637	USP38	84640	4q31.1	
+CA	C19	C19.057	ubiquitin-specific peptidase 44	MER0014638	USP44	84101	12q21.33	
+CA	C19	C19.058	ubiquitin-specific peptidase 50	MER0030315	USP50	373509	15q21.1	
+CA	C19	C19.059	ubiquitin-specific peptidase 35	MER0014646	USP35	57558	11q13.5	
+CA	C19	C19.060	ubiquitin-specific peptidase 30	MER0014649	USP30	84749	12q23.3	
+CA	C19	C19.064	ubiquitin-specific peptidase 45	MER0030314	USP45	85015	6q16.3	
+CA	C19	C19.065	ubiquitin-specific peptidase 51	MER0014769	USP51	158880	Xp11.21-22	
+CA	C19	C19.067	ubiquitin-specific peptidase 34	MER0014780	USP34	23021	2p15	
+CA	C19	C19.068	ubiquitin-specific peptidase 48	MER0064620	USP48	84196	1p36.12	
+CA	C19	C19.069	ubiquitin-specific peptidase 40	MER0015483	USP40	55230	2q37.1	
+CA	C19	C19.070	ubiquitin-specific peptidase 41	MER0045268	USP41	150200	22q11.22	
+CA	C19	C19.071	ubiquitin-specific peptidase 31	MER0015493	USP31	57478	16p12.3	
+CA	C19	C19.072	Mername-AA129 peptidase	MER0016485				
+CA	C19	C19.073	ubiquitin-specific peptidase 49	MER0016486	USP49	25862	6pter-p12.1	
+CA	C19	C19.078	USP17-like peptidase	MER0030192		401447	8p23.1	
+CA	C19	C19.080	ubiquitin-specific peptidase 54	MER0028714	USP54	159195	10q22.3	
+CA	C19	C19.081	ubiquitin-specific peptidase 53	MER0027329	USP53	54532	4q27	
+CA	C19	C19.106	USP27X	MER0052579	USP27X	373504	Xp11.23	
+CA	C19	C19.107	ubiquitin-specific peptidase 32	MER1314009	USP32		17q23.1-q23.2	
+CA	C19	C19.108	ubiquitin-specific peptidase 43 [misleading]	MER0030140	USP43	124739	17p13.1	
+CA	C19	C19.972	ubiquitin-specific endopeptidase 39 [misleading]	MER0064621	USP39	10713	2p11.2	
+CA	C19	C19.974	Mername-AA090 non-peptidase homologue	MER0014739			22q11.2	
+CA	C19	C19.978	ubiquitin-specific peptidase 52 [misleading]	MER0030317	PAN2	9924	12q13.2-q13.3	
+CA	C19	C19.984	USP17L7	MER0432114	USP17L7		8p23.1	
+CA	C19	C19.985	USP17L4	MER1344588	USP17L4		8	
+CA	C19	C19.986	USP17L8	MER1333087	USP17L8		8	
+CA	C19	C19.987	USP17L23	MER1314132	USP17L23			
+CA	C19	C19.A82	USP17L11	MER1122448	USP17L15		4p16.1	
+CA	C19	C19.A83	USP17L2	MER1353374	USP17L2			
+CA	C19	C19.A84	USP17L1	MER1348973	USP17L1			
+CA	C19	C19.A85	USP17L3	MER1347249				
+CA	C19	C19.A86	USP17L5	MER1337358	USP17L5		4	
+CA	C19	C19.A87	USP17L6P	MER1333123	USP17L6P			
+CA	C19	C19.A88	USP17L10	MER1323906	USP17L10		4	
+CA	C19	C19.A89	USP17L12	MER1323888	USP17L12		4	
+CA	C19	C19.A90	USP17L13	MER1323872	USP17L13		4	
+CA	C19	C19.A91	USP17L15	MER1322356	USP17L15			
+CA	C19	C19.A92	USP17L17	MER1314419	USP17L17			
+CA	C19	C19.A93	USP17L18	MER1314408	USP17L18			
+CA	C19	C19.A94	USP17L19	MER1314375	USP17L19			
+CA	C19	C19.A95	USP17L20	MER1314372	USP17L20		4	
+CA	C19	C19.A96	USP17L21	MER1314278	USP17L21		4	
+CA	C19	C19.A97	USP17L22	MER1314192	USP17L22		4	
+CA	C19	C19.P01	NEK2 pseudogene	MER0014736	NEK2P1	326302	14q11.2	
+CA	C19	C19.P02	C19 pseudogene (Homo sapiens: chromosome 5)	MER0029972			5	
+CA	C19	C19.P05	Mername-AA088 peptidase	MER0014750	USP8P1	394216	6p21.3	
+CA	C54	C54.002	autophagin-2	MER0013564	ATG4A	115201	Xq22.1-22.3	
+CA	C54	C54.003	autophagin-1	MER0013561	ATG4B	23192	2q37.3	
+CA	C54	C54.004	autophagin-3	MER0014316	ATG4C	84938	1p31.3	
+CA	C54	C54.005	autophagin-4	MER0064622	ATG4D	84971	19p13.2	
+CA	C64	C64.001	Cezanne peptidase	MER0029042	OTUD7B	56957	1q21.3	
+CA	C64	C64.002	Cezanne-2 peptidase	MER0029044	OTUD7A	161725	15q13.1	
+CA	C64	C64.003	A20 peptidase	MER0029050	TNFAIP3	7128	6q23-q25	
+CA	C64	C64.004	trabid peptidase	MER0029052	ZRANB1	54764	10q26.2	
+CA	C64	C64.006	VCIP135 deubiquitinating peptidase	MER0152304	VCPIP1	80124	8q13	
+CA	C65	C65.001	otubain-1	MER0029056	OTUB1	55611	11q13.1	
+CA	C65	C65.002	otubain-2	MER0029061	OTUB2	78990	14q32.13-q32.2	
+CA	C67	C67.001	CylD peptidase	MER0030104	CYLD	1540	16q12.1	
+CA	C78	C78.001	UfSP1 peptidase	MER0042724	UFSP1	402682	7q22.1	
+CA	C78	C78.002	UfSP2 peptidase	MER0060306	UFSP2	55325	4q35.1	
+CA	C78	C78.003	ZUP1 g.p. (Homo sapiens)	MER1108685	ZUP1		6q22.1	
+CA	C85	C85.001	OTUD5 peptidase (Homo sapiens)	MER0086098	OTUD5	55593	X	
+CA	C85	C85.003	OTUD3 peptidase (Homo sapiens)	MER0122467	OTUD3	23252	1p36.13	
+CA	C85	C85.004	OTUD1 peptidase (Homo sapiens)	MER0125457	OTUD1	220213	10p12.2	
+CA	C85	C85.005	ALG13 g.p. (Homo sapiens)	MER0123606	ALG13	79868	Xq23	
+CA	C85	C85.007	YOD1 peptidase	MER0116559	YOD1	55432	1q32.1	
+CA	C85	C85.008	OTU2 peptidase (Saccharomyces cerevisiae-type)	MER0258096				
+CA	C85	C85.009	OTUD6B peptidase (Homo sapiens)	MER0957411	OTUD6B		8q21.3	
+CA	C85	C85.P01	hin1L g.p. (Homo sapiens)	MER0139816		360227	12p13.32	
+CA	C86	C86.001	ataxin-3	MER0099998	ATXN3	4287	14q24.3-q32.2	
+CA	C86	C86.002	ataxin-3-like peptidase	MER0115261	ATXN3L	92552	Xp22.2	
+CA	C86	C86.004	JosD1 peptidase	MER0125334	JOSD1	9929	22q13.1	
+CA	C86	C86.005	JosD2 peptidase	MER0124068	JOSD2	126119	19q13.33	
+CA	C98	C98.001	USPL1 peptidase	MER0407721	USPL1		13q12.3	
+CD	C13	C13.002	legumain (plant alpha form)	MER0044591				
+CD	C13	C13.004	legumain, animal-type	MER0001800	LGMN	5641	14q32.1	
+CD	C13	C13.005	glycosylphosphatidylinositol:protein transamidase	MER0002479	PIGK	10026	1	
+CD	C13	C13.P01	legumain pseudogene (Homo sapiens)	MER0029741	LGMN2P	122199	13q21.2	
+CD	C14	C14.001	caspase-1	MER0000850	CASP1	834	11q22.2-q22.3	
+CD	C14	C14.003	caspase-3	MER0000853	CASP3	836	4q33-q35.1	
+CD	C14	C14.004	caspase-7	MER0002705	CASP7	840	10q25.1-q25.2	
+CD	C14	C14.005	caspase-6	MER0002708	CASP6	839	4q25	
+CD	C14	C14.006	caspase-2	MER0001644	CASP2	835	7q34-q35	
+CD	C14	C14.007	caspase-4	MER0001938	CASP4	837	11q22.2-q22.3	
+CD	C14	C14.008	caspase-5	MER0002240	CASP5	838	11q22.2-q22.3	
+CD	C14	C14.009	caspase-8	MER0002849	CASP8	841	2q33-q34	
+CD	C14	C14.010	caspase-9	MER0002707	CASP9	842	1p36.1-p36.3	
+CD	C14	C14.011	caspase-10	MER0002579	CASP10	843	2q33-q34	
+CD	C14	C14.018	caspase-14	MER0012083	CASP14	23581	19p13.1	
+CD	C14	C14.026	paracaspase	MER0019325	MALT1	10892	18q21	
+CD	C14	C14.028	Mername-AA143 peptidase	MER0021304		120332	11q22.3	
+CD	C14	C14.029	Mername-AA186 peptidase	MER0020516		160130	11q22.3	
+CD	C14	C14.971	FLIP protein	MER0003026	CFLAR	8837	2q33-q34	
+CD	C14	C14.976	Mername-AA142 protein	MER0021316		160131	11q22.3	
+CD	C14	C14.A09	-	MER0021463				
+CD	C14	C14.P01	caspase-12 pseudogene (Homo sapiens)	MER0019698	CASP12	120329	11q22.3	
+CD	C14	C14.P02	Mername-AA093 caspase pseudogene	MER0014766		197350	16p13.3	
+CD	C50	C50.002	separase (Homo sapiens-type)	MER0011775	ESPL1	9700	8	
+CD	C50	C50.P01	separase-like pseudogene	MER0014797			8q21.2	
+CE	C48	C48.002	SENP1 peptidase	MER0011012	SENP1	29843	12q13.1	
+CE	C48	C48.003	SENP3 peptidase	MER0011019	SENP3	26168	17p13	
+CE	C48	C48.004	SENP6 peptidase	MER0011109	SENP6	26054	6q13-q14.3	
+CE	C48	C48.007	SENP2 peptidase	MER0012183	SENP2	59343	3q28	
+CE	C48	C48.008	SENP5 peptidase	MER0014032	SENP5	205564	3q29	
+CE	C48	C48.009	SENP7 peptidase	MER0014095	SENP7	57337	3q12	
+CE	C48	C48.011	SENP8 peptidase	MER0016161	SENP8	123228	15q22.32	
+CE	C48	C48.012	SENP4 peptidase	MER0005557				
+CF	C15	C15.010	pyroglutamyl-peptidase I (chordate)	MER0011032	PGPEP1	54858	19p13.11	
+CF	C15	C15.011	Mername-AA073 peptidase	MER0029978	PGPEP1L	145814	15q26.3	
+CP	C97	C97.001	desumoylating isopeptidase 1	MER0187548				
+CP	C97	C97.002	desumoylating isopeptidase 2	MER0226442				
+G-	G5	G05.002	RCE1 peptidase (Homo sapiens-type)	MER0004246	RCE1	9986	11q13	
+GC	G4	G04.001	Tiki1 peptidase	MER0105341	TRABD2A	129293	2p11.2	
+GC	G4	G04.002	Tiki2 peptidase	MER0264123	TRABD2B			
+I-	I100	I100.001	stanniocalcin-1	MER0879853				
+I-	I100	I100.001	stanniocalcin-1	MER0694553	STC1		8p21.2	
+I-	I100	I100.002	stanniocalcin-2	MER0890268	STC2		5q35.2	
+I-	I103	I103.001	shugoshin-2 (Homo sapiens)	MER1314005	SGO2		2q33.1	
+I-	I103	I103.UPW	family I103 unassigned peptidase inhibitors	MER0096366				
+I-	I103	I103.UPW	family I103 unassigned peptidase inhibitors	MER0021682				
+I-	I103	I103.UPW	family I103 unassigned peptidase inhibitors	MER0003883	NRD1	4898	1p32.2	
+I-	I103	I103.UPW	family I103 unassigned peptidase inhibitors	MER0014743	USP12	219333	13q12.13	
+I-	I103	I103.UPW	family I103 unassigned peptidase inhibitors	MER0032593	KY		3q22.2	
+MA	M1	M01.001	aminopeptidase N	MER0000997	ANPEP	290	15q25-q26	
+MA	M1	M01.003	aminopeptidase A	MER0001012	ENPEP	2028	4q25	
+MA	M1	M01.004	leukotriene A4 hydrolase	MER0001013	LTA4H	4048	12q22	
+MA	M1	M01.010	cytosol alanyl aminopeptidase	MER0002746	NPEPPS	9520	17q12-q21	
+MA	M1	M01.011	cystinyl aminopeptidase	MER0002060	LNPEP	4012	5q15	
+MA	M1	M01.018	endoplasmic reticulum aminopeptidase 1	MER0005331	ERAP1	51752	5q15	
+MA	M1	M01.022	arginyl aminopeptidase-like 1	MER0012271	RNPEPL1	57140	2q37.3	
+MA	M1	M01.024	ERAP2 aminopeptidase	MER0002968	ERAP2	64167	5q15	
+MA	M1	M01.026	aminopeptidase Q	MER0052595		206338	5q23.1	
+MA	M1	M01.028	aminopeptidase O	MER0019730	C9orf3	84909	9q22.32	
+MA	M1	M01.972	Tata binding protein associated factor	MER0026493	TAF2	6873	8q24.12	
+MA	M2	M02.001	angiotensin-converting enzyme peptidase unit 1	MER0004967	ACE	1636	17q23	
+MA	M2	M02.004	angiotensin-converting enzyme peptidase unit 2	MER0287567				
+MA	M2	M02.004	angiotensin-converting enzyme peptidase unit 2	MER0001019	ACE	1636	17q23	
+MA	M2	M02.006	angiotensin-converting enzyme-2	MER0011061	ACE2	59272	Xp22	
+MA	M2	M02.972	Mername-AA153 protein	MER0020514		201211	17q21.33	
+MA	M3	M03.001	thimet oligopeptidase	MER0001737	THOP1	7064	19q13.3	
+MA	M3	M03.002	neurolysin	MER0010991	NLN	57486	5q12.3	
+MA	M3	M03.006	mitochondrial intermediate peptidase	MER0003665	MIPEP	4285	13q12	
+MA	M3	M03.971	Mername-AA154 protein	MER0021317		202900	7q21.13	
+MA	M8	M08.003	leishmanolysin-2	MER0014492	LMLN	89782	3q29	
+MA	M8	M08.005	LMLN2 g.p. (Homo sapiens)	MER0180031			14q11.2	
+MA	M10	M10.001	matrix metallopeptidase-1	MER0001063	MMP1	4312	11q22-q23	
+MA	M10	M10.002	matrix metallopeptidase-8	MER0001084	MMP8	4317	11q21-q22	
+MA	M10	M10.003	matrix metallopeptidase-2	MER0001080	MMP2	4313	16q13	
+MA	M10	M10.004	matrix metallopeptidase-9	MER0001085	MMP9	4318	20q11.2-q13.1	
+MA	M10	M10.005	matrix metallopeptidase-3	MER0001068	MMP3	4314	11q23	
+MA	M10	M10.006	matrix metallopeptidase-10 (Homo sapiens-type)	MER0001072	MMP10	4319	11q22.3-q23	
+MA	M10	M10.007	matrix metallopeptidase-11	MER0001075	MMP11	4320	22q11.2	
+MA	M10	M10.008	matrix metallopeptidase-7	MER0001092	MMP7	4316	11q21-q22	
+MA	M10	M10.009	matrix metallopeptidase-12	MER0001089	MMP12	4321	11q22.2-q22.3	
+MA	M10	M10.013	matrix metallopeptidase-13	MER0001411	MMP13	4322	11q22.3	
+MA	M10	M10.014	membrane-type matrix metallopeptidase-1	MER0001077	MMP14	4323	14q11-q12	
+MA	M10	M10.015	membrane-type matrix metallopeptidase-2	MER0002383	MMP15	4324	16q13-q21	
+MA	M10	M10.016	membrane-type matrix metallopeptidase-3	MER0002384	MMP16	4325	8q21	
+MA	M10	M10.017	membrane-type matrix metallopeptidase-4	MER0002595	MMP17	4326	12q24.3	
+MA	M10	M10.019	matrix metallopeptidase-20	MER0003021	MMP20	9313	11q22.3	
+MA	M10	M10.021	matrix metallopeptidase-19	MER0002076	MMP19	4327	12q14	
+MA	M10	M10.022	matrix metallopeptidase-23B	MER0004766	MMP23B	8510	1p36.3	
+MA	M10	M10.023	membrane-type matrix metallopeptidase-5	MER0005638	MMP24	10893	20q11.2	
+MA	M10	M10.024	membrane-type matrix metallopeptidase-6	MER0012071	MMP25	64386	16p13.3	
+MA	M10	M10.026	matrix metallopeptidase-21	MER0006101	MMP21	118856	10q26.2	
+MA	M10	M10.027	matrix metallopeptidase-22	MER0014098	MMP27	64066	11q24	
+MA	M10	M10.029	matrix metallopeptidase-26	MER0012072	MMP26	56547	11p15	
+MA	M10	M10.030	matrix metallopeptidase-28	MER0013587	MMP28	79148	17q21.1	
+MA	M10	M10.950	macrophage elastase homologue (chromosome 8, Homo sapiens)	MER0030035			8	
+MA	M10	M10.971	Mername-AA156 protein	MER0021309		120320	11q22.2	
+MA	M10	M10.973	matrix metallopeptidase-like 1	MER0045280	MMPL1~withdrawn	4328	16p13.3	
+MA	M100	M100.001	spartan peptidase	MER0167725	SPRTN		1q42.2	
+MA	M12	M12.002	meprin alpha subunit	MER0001111	MEP1A	4224	6p21.2-p21.1	
+MA	M12	M12.004	meprin beta subunit	MER0005213	MEP1B	4225	18q12.2-q12.3	
+MA	M12	M12.005	procollagen C-peptidase	MER0001113	BMP1	649	8p21	
+MA	M12	M12.016	vertebrate tolloid-like 1 protein	MER0005124	TLL1	7092	4q32-q33	
+MA	M12	M12.018	mammalian-type tolloid-like 2 protein	MER0005866	TLL2	7093	10q23-q24	
+MA	M12	M12.021	ADAMTS9 peptidase	MER0012092	ADAMTS9	56999	3p14.2-p14.3	
+MA	M12	M12.024	ADAMTS14 peptidase	MER0016700	ADAMTS14	140766	10q2	
+MA	M12	M12.025	ADAMTS15 peptidase	MER0017029	ADAMTS15	170689	11q25	
+MA	M12	M12.026	ADAMTS16 peptidase	MER0015689	ADAMTS16	170690	5p15	
+MA	M12	M12.027	ADAMTS17 peptidase	MER0016302	ADAMTS17	170691	15q24	
+MA	M12	M12.028	ADAMTS18 peptidase	MER0016090	ADAMTS18	170692	16q23	
+MA	M12	M12.029	ADAMTS19 peptidase	MER0015663	ADAMTS19	171019	5q31	
+MA	M12	M12.208	ADAM8 peptidase	MER0003902	ADAM8	101	10q26.3	
+MA	M12	M12.209	ADAM9 peptidase	MER0001140	ADAM9	8754	8p11.22	
+MA	M12	M12.210	ADAM10 peptidase	MER0002382	ADAM10	102	15q21.3	
+MA	M12	M12.212	ADAM12 peptidase	MER0005107	ADAM12	8038	10q26	
+MA	M12	M12.214	ADAM19 peptidase	MER0012241	ADAM19	8728	5q32-33	
+MA	M12	M12.215	ADAM15 peptidase	MER0002386	ADAM15	8751	1q21.3	
+MA	M12	M12.217	ADAM17 peptidase	MER0003094	ADAM17	6868	2p25	
+MA	M12	M12.218	ADAM20 peptidase	MER0004725	ADAM20	8748	14q24.1	
+MA	M12	M12.219	ADAMDEC1 peptidase	MER0000743	ADAMDEC1	27299	8p21.1	
+MA	M12	M12.220	ADAMTS3 peptidase	MER0005100	ADAMTS3	9508	4q21	
+MA	M12	M12.221	ADAMTS4 peptidase	MER0005101	ADAMTS4	9507	1q31-q32	
+MA	M12	M12.222	ADAMTS1 peptidase	MER0005546	ADAMTS1	9510	21q22.1-q22	
+MA	M12	M12.224	ADAM28 peptidase (Homo sapiens-type)	MER0005495	ADAM28	10863	8p21.2	
+MA	M12	M12.225	ADAMTS5 peptidase	MER0005548	ADAMTS5	11096	21q22.1-q22	
+MA	M12	M12.226	ADAMTS8 peptidase	MER0005545	ADAMTS8	11095	11q25	
+MA	M12	M12.230	ADAMTS6 peptidase	MER0005893	ADAMTS6	11174	5pter-qter	
+MA	M12	M12.231	ADAMTS7 peptidase	MER0005894	ADAMTS7	11173	15pter-qter	
+MA	M12	M12.232	ADAM30 peptidase	MER0006268	ADAM30	11085	1p11-p13	
+MA	M12	M12.234	ADAM21 peptidase (Homo sapiens-type)	MER0004726	ADAM21	8747	14q24.1	
+MA	M12	M12.235	ADAMTS10 peptidase	MER0014331	ADAMTS10	81794	19p13.3	
+MA	M12	M12.237	ADAMTS12 peptidase	MER0014337	ADAMTS12	81792	5q35	
+MA	M12	M12.241	ADAMTS13 peptidase	MER0015450	ADAMTS13	11093	9q34	
+MA	M12	M12.244	ADAM33 peptidase	MER0015143	ADAM33	80332	20p13	
+MA	M12	M12.245	ovastacin	MER0029996	ASTL	431705	2q11.1	
+MA	M12	M12.246	ADAMTS20 peptidase (Homo sapiens-type)	MER0026906	ADAMTS20	80070	12q12	
+MA	M12	M12.301	procollagen I N-peptidase	MER0004985	ADAMTS2	9509	5q23-q24	
+MA	M12	M12.950	ADAM2 protein	MER0003090	ADAM2	2515	8p11.2	
+MA	M12	M12.956	ADAM7 protein	MER0005109	ADAM7	8756	8p21.2	
+MA	M12	M12.957	ADAM18 protein	MER0012230	ADAM18	8749	8p22	
+MA	M12	M12.960	ADAM32 protein	MER0026938	ADAM32	203102	8p11.21	
+MA	M12	M12.962	non-peptidase homologue (Homo sapiens chromosome 4)	MER0029973				
+MA	M12	M12.963	family M12 non-peptidase homologue (Homo sapiens chromosome 16)	MER0047654			16	
+MA	M12	M12.964	family M12 non-peptidase homologue (Homo sapiens chromosome 15)	MER0047250				
+MA	M12	M12.975	ADAM3B protein (Homo sapiens-type)	MER0005199	ADAM3B	1596	16q12.1	
+MA	M12	M12.976	ADAM11 protein	MER0001146	ADAM11	4185	17q21.3	
+MA	M12	M12.978	ADAM22 protein	MER0005102	ADAM22	53616	7q21	
+MA	M12	M12.979	ADAM23 protein	MER0005103	ADAM23	8745	2q33	
+MA	M12	M12.981	ADAM29 protein	MER0006267	ADAM29	11086	4q34.2-qter	
+MA	M12	M12.983	Mername-AA113 homologue	MER0357886				
+MA	M12	M12.987	protein similar to ADAM21 peptidase preproprotein (Homo sapiens)	MER0026944		137491	8p22	
+MA	M12	M12.990	Mername-AA225 peptidase homologue (Homo sapiens)	MER0047474			15	
+MA	M12	M12.996	-	MER0047044			14q32.33	
+MA	M12	M12.P01	putative ADAM pseudogene (chromosome 4, Homo sapiens)	MER0029975				
+MA	M12	M12.P02	ADAM3A g.p. (Homo sapiens)	MER0005200	ADAM3A	1587	8p21-p12	
+MA	M12	M12.P03	ADAM1 g.p. (Homo sapiens)	MER0003912	ADAM1	8759	12q24	
+MA	M13	M13.001	neprilysin	MER0001050	MME	4311	3q21-q27	
+MA	M13	M13.002	endothelin-converting enzyme 1	MER0001057	ECE1	1889	1p36.1	
+MA	M13	M13.003	endothelin-converting enzyme 2	MER0004776	ECE2	9718	3q26.1-q26.33	
+MA	M13	M13.007	endothelin-converting enzyme-like 1 endopeptidase	MER0005197	ECEL1	9427	2q37.1	
+MA	M13	M13.008	neprilysin-2	MER0013406	MMEL1	79258	1p36	
+MA	M13	M13.090	Kell blood-group peptidase	MER0001054	KEL	3792	7q33	
+MA	M13	M13.091	PHEX peptidase	MER0002062	PHEX	5251	Xp22.2-p22.1	
+MA	M41	M41.006	paraplegin	MER0004454	SPG7	6687	16q24.3	
+MA	M41	M41.007	Afg3-like protein 2	MER0005496	AFG3L2	10939	18p11	
+MA	M41	M41.016	Afg3-like protein 1A	MER0014306	AFG3L1P	172	16q24	
+MA	M41	M41.026	YME1L1 g.p. (Homo sapiens) and similar	MER0005755	YME1L1	10730	10p14	
+MA	M41	M41.A19	hCG2041332 (Homo sapiens)	MER0001246			19	
+MA	M43	M43.004	pappalysin-1	MER0002217	PAPPA	5069	9q33.1	
+MA	M43	M43.005	pappalysin-2	MER0014521	PAPPA2	60676	1q23-q25	
+MA	M48	M48.003	farnesylated-protein converting enzyme 1	MER0002646	ZMPSTE24	10269	1p34	
+MA	M48	M48.017	metalloprotease-related protein-1	MER0030873	OMA1	115209	1p32	
+MA	M49	M49.001	dipeptidyl-peptidase III	MER0004252	DPP3	10072	11q12-q13.1	
+MA	M49	M49.972	Mername-AA164 protein	MER0020410		132524	4q13.1	
+MA	M49	M49.P01	LOC138971 g.p. (Homo sapiens)	MER0020074		138971	9q21.31	
+MA	M54	M54.002	aminopeptidase AMZ2	MER0011907	AMZ2	51321	17q24.3	
+MA	M54	M54.003	aminopeptidase AMZ1	MER0058242	AMZ1	155185	7p22.2	
+MA	M76	M76.001	Atp23 peptidase (animal-type)	MER0060642	XRCC6BP1	91419	12q14.1	
+MA	M87	M87.001	chloride channel accessory protein 1	MER0203744	CLCA1		1p22.3	
+MA	M87	M87.002	chloride channel accessory protein 4	MER0203248				
+MA	M87	M87.003	chloride channel accessory protein 2	MER0204055				
+MA	M98	M98.A03	TRPM8 channel-associated factor 2	MER0313246	TCAF2		7q35	
+MA	M98	M98.A03	TRPM8 channel-associated factor 2	MER0280606	TCAF1		7q35	
+MC	M14	M14.001	carboxypeptidase A1	MER0001190	CPA1	1357	7q32	
+MC	M14	M14.002	carboxypeptidase A2	MER0001608	CPA2	1358	7q32	
+MC	M14	M14.003	carboxypeptidase B	MER0001194	CPB1	1360	3q24	
+MC	M14	M14.004	carboxypeptidase N	MER0001198	CPN1	1369	10	
+MC	M14	M14.005	carboxypeptidase E	MER0001199	CPE	1363	4	
+MC	M14	M14.006	carboxypeptidase M	MER0001205	CPM	1368	12q15	
+MC	M14	M14.009	carboxypeptidase B2	MER0001193	CPB2	1361	13q14.11	
+MC	M14	M14.010	carboxypeptidase A3	MER0001187	CPA3	1359	3q21-q25	
+MC	M14	M14.011	metallocarboxypeptidase D peptidase unit 1	MER0003781	CPD	1362	17p11.1-q11.2	
+MC	M14	M14.012	metallocarboxypeptidase Z	MER0003428	CPZ	8532	4p16.1	
+MC	M14	M14.016	metallocarboxypeptidase D peptidase unit 2	MER0004963	CPD	1362	17p11.1-q11.2	
+MC	M14	M14.017	carboxypeptidase A4	MER0013421	CPA4	51200	7q32	
+MC	M14	M14.018	carboxypeptidase A6	MER0013456	CPA6	57094	8q12.3	
+MC	M14	M14.020	carboxypeptidase A5	MER0017121	CPA5	93979	7q32	
+MC	M14	M14.021	metallocarboxypeptidase O	MER0016044	CPO	130749	2q34	
+MC	M14	M14.025	cytosolic carboxypeptidase 5	MER0033174		60509	2p23.3	
+MC	M14	M14.026	cytosolic carboxypeptidase 3	MER0033176	AGBL3	340351	7q33	
+MC	M14	M14.027	cytosolic carboxypeptidase 6	MER0033178	AGBL4	84871	1p33	
+MC	M14	M14.028	cytosolic carboxypeptidase 1	MER0033179	AGTPBP1	23287	9q22.1	
+MC	M14	M14.029	cytosolic carboxypeptidase 2	MER0037713	AGBL2	79841	11p11.2	
+MC	M14	M14.030	cytosolic carboxypeptidase 4	MER1153871				
+MC	M14	M14.039	metallocarboxypeptidase CPX-1 (Homo sapiens)	MER0013404	CPXM1	56265	20p12.3-p13	
+MC	M14	M14.950	metallocarboxypeptidase D non-peptidase unit	MER0004964	CPD	1362	17p11.1-q11.2	
+MC	M14	M14.951	aortic carboxypeptidase-like protein	MER0003889	AEBP1	165	7	
+MC	M14	M14.955	inactive carboxypeptidase-like protein X2 (Homo sapiens)	MER0026952	CPXM2	119587	10q26.13	
+ME	M16	M16.002	insulysin	MER0001214	IDE	3416	10q23.33	
+ME	M16	M16.005	nardilysin	MER0626257	NRDC	4898	1p32.3	
+ME	M16	M16.009	eupitrilysin	MER0004877	PITRM1	10531	10p15.2	
+ME	M16	M16.971	mitochondrial processing peptidase non-peptidase alpha subunit	MER0001413	PMPCA	23203	9q34.3	
+ME	M16	M16.973	ubiquinol-cytochrome c reductase core protein I	MER0004497	PMPCB	9512	7q22.1	
+ME	M16	M16.973	ubiquinol-cytochrome c reductase core protein I	MER0003543	UQCRC1	7384	3p21.3	
+ME	M16	M16.974	ubiquinol-cytochrome c reductase core protein II	MER0003544	UQCRC2	7385	16p12	
+ME	M16	M16.981	ubiquinol-cytochrome c reductase core protein domain 2	MER0043998	UQCRC1	7384	3p21.3	
+ME	M16	M16.982	insulysin unit 2	MER0046821	IDE	3416	10q23.33	
+ME	M16	M16.983	nardilysin unit 2	MER0046874	NRDC	4898	1p32.3	
+ME	M16	M16.984	insulysin unit 3	MER0078753	IDE	3416	10q23.33	
+ME	M16	M16.987	nardilysin unit 3	MER0626256	NRDC	4898	1p32.3	
+ME	M16	M16.P01	LOC133083 g.p. (Homo sapiens)	MER0021876		133083	4q22.2	
+MF	M17	M17.001	leucyl aminopeptidase 3	MER0003100	LAP3	51056	4p15.33	
+MF	M17	M17.005	Mername-AA040 peptidase	MER0003919			6	
+MF	M17	M17.006	leucyl aminopeptidase-1 (Caenorhabditis-type)	MER0013416	NPEPL1	79716	20q13.32	
+MG	M24	M24.002	methionyl aminopeptidase 2	MER0001728	METAP2	10988	12q22	
+MG	M24	M24.005	aminopeptidase P2	MER0004498	XPNPEP2	7512	Xq25	
+MG	M24	M24.007	Xaa-Pro dipeptidase (eukaryote-type)	MER0001248	PEPD	5184	19cen-q13.11	
+MG	M24	M24.009	aminopeptidase P1	MER0004321	XPNPEP1	7511	10q25.3	
+MG	M24	M24.017	methionyl aminopeptidase 1 (eukaryote)	MER0001342	METAP1	23173	4q23	
+MG	M24	M24.026	aminopeptidase P3	MER0013463	XPNPEP3	63929	22q13.31-q13.33	
+MG	M24	M24.028	mitochondrial methionyl aminopeptidase	MER0014055		254042	2q31.1	
+MG	M24	M24.950	Mername-AA020 peptidase homologue	MER0010972			12q11-q12	
+MG	M24	M24.973	proliferation-association protein 1	MER0005497	PA2G4	5036	12q13	
+MG	M24	M24.974	FACT complex subunit SPT16	MER0026495	SUPT16H	11198	14q11.2	
+MG	M24	M24.975	proliferation-associated protein 1-like (Homo sapiens chromosome X)	MER0029983			Xq23	
+MG	M24	M24.976	Mername-AA226 peptidase homologue (Homo sapiens)	MER0056262		442053	2q22.3	
+MG	M24	M24.977	Mername-AA227 peptidase homologue (Homo sapiens)	MER0047299			18q11.2-q12.1	
+MH	M18	M18.002	aspartyl aminopeptidase	MER0003373	DNPEP	23549	2q36.1	
+MH	M20	M20.005	carnosine dipeptidase II	MER0014551	CNDP2	55748	18	
+MH	M20	M20.006	carnosine dipeptidase I	MER0015142	CNDP1	84735	18q22.3	
+MH	M20	M20.011	carboxypeptidase PM20D1	MER0033182	PM20D1	148811	1q32.1	
+MH	M20	M20.021	cytosolic beta-alanyl-lysine dipeptidase	MER0021873	PM20D2	135293	6q15	
+MH	M20	M20.973	aminoacylase	MER0001271	ACY1	95	3p21.1	
+MH	M28	M28.010	glutamate carboxypeptidase II	MER0002104	FOLH1	2346	11p11.2	
+MH	M28	M28.011	NAALADASE L peptidase	MER0005239	NAALADL1	10004	11q12	
+MH	M28	M28.012	glutamate carboxypeptidase III	MER0005238	NAALAD2	10003	11q14.3-q21	
+MH	M28	M28.014	carboxypeptidase Q	MER0005244		10404	8q22.2	
+MH	M28	M28.016	Mername-AA103 peptidase	MER0015091	QPCTL	54814	19q13.32	
+MH	M28	M28.018	Fxna peptidase	MER0029965	ERMP1	79956	9p24	
+MH	M28	M28.972	transferrin receptor protein	MER0002105	TFRC	7037	3q26.2	
+MH	M28	M28.973	transferrin receptor 2 protein	MER0005152	TFR2	7036	7q22	
+MH	M28	M28.974	glutaminyl cyclase	MER0015095	QPCT	25797	2p22.3	
+MH	M28	M28.975	glutamate carboxypeptidase II (Homo sapiens)-type non-peptidase homologue	MER0026971	NAALADL2	254827	3q26.31	
+MH	M28	M28.978	nicalin	MER0044627	NCLN	56926	19p13.3	
+MJ	M19	M19.001	membrane dipeptidase	MER0001260	DPEP1	1800	16q24.3	
+MJ	M19	M19.002	membrane-bound dipeptidase-2	MER0013499	DPEP2	64174	16q22.1	
+MJ	M19	M19.004	membrane-bound dipeptidase-3	MER0013496	DPEP3	64180	16q22.1	
+MJ	M38	M38.972	dihydro-orotase	MER0005767	CAD	790	2p23.3	
+MJ	M38	M38.973	dihydropyrimidinase	MER0033266	DPYS	1807	8q22	
+MJ	M38	M38.974	dihydropyrimidinase related protein-1	MER0030143	CRMP1	1400	4p16.1-p15	
+MJ	M38	M38.975	dihydropyrimidinase related protein-2	MER0030155	DPYSL2	1808	8p22-p21	
+MJ	M38	M38.976	dihydropyrimidinase related protein-3	MER0030151	DPYSL3	1809	5q32	
+MJ	M38	M38.977	dihydropyrimidinase related protein-4	MER0030149	DPYSL4	10570	10q26	
+MJ	M38	M38.978	dihydropyrimidinase related protein-5	MER0030136	DPYSL5	56896	2p23.3	
+MJ	M38	M38.979	hypothetical protein like 5730457F11RIK	MER0033184		51005	16p13.3	
+MJ	M38	M38.980	probable imidazolonepropionase	MER0033186	AMDHD1	144193	12q23.1	
+MJ	M38	M38.981	guanine deaminase	MER0037714	GDA	9615	9q21.11-21.33	
+MM	M50	M50.001	site 2 peptidase	MER0004458	MBTPS2	51360	X	
+MP	M67	M67.002	Csn5 peptidase	MER0022057	COPS5	10987	8q13.1	
+MP	M67	M67.003	STAM-binding protein-like 1	MER0021865	STAMBPL1	57559	10q23.31	
+MP	M67	M67.004	Brcc36 isopeptidase	MER0021890	BRCC3	79184	Xq28	
+MP	M67	M67.005	histone H2A deubiquitinase MYSM1	MER0021887	MYSM1	114803	1p32.1	
+MP	M67	M67.006	STAMBP isopeptidase	MER0030146	STAMBP	10617	2p13.1	
+MP	M67	M67.008	putative peptidase (Homo sapiens chromosome 2)	MER0029970			2	
+MP	M67	M67.971	Mername-AA168 protein	MER0021886	EIF3H	8667	8q24.11	
+MP	M67	M67.972	COP9 signalosome subunit 6	MER0030137	COPS6	10980	7q22.1	
+MP	M67	M67.973	26S proteasome non-ATPase regulatory subunit 7	MER0030134	PSMD7	5713	16q23-q24	
+MP	M67	M67.974	eukaryotic translation initiation factor 3 subunit F	MER0030133	EIF3F	8665	11p15.4	
+MP	M67	M67.975	IFP38 peptidase homologue	MER0030132	EIF3F	83880	11p15.4	
+MP	M67	M67.A10	F37A4.5 protein (Caenorhabditis elegans)	MER0020382	PSMD14	10213	2q24.3	
+PA	S1	S01.010	granzyme B (Homo sapiens-type)	MER0000168	GZMB	3002	14q11.2	
+PA	S1	S01.011	testisin	MER0005212	PRSS21	10942	16p13.3	
+PA	S1	S01.015	tryptase beta	MER0000136	TPSB2	64499	16p13.3	
+PA	S1	S01.017	kallikrein-related peptidase 5	MER0005544	KLK5	25818	19q13.3-q13.4	
+PA	S1	S01.019	corin	MER0005881	CORIN	10699	4p13-p12	
+PA	S1	S01.020	kallikrein-related peptidase 12	MER0006038	KLK12	43849	19q13.3-q13.4	
+PA	S1	S01.021	DESC1 peptidase	MER0006298	TMPRSS11E	28983	4q13.3	
+PA	S1	S01.028	tryptase gamma 1	MER0011036	TPSG1	25823	16p13.3	
+PA	S1	S01.029	kallikrein-related peptidase 14	MER0011038	KLK14	43847	19q13.3-q13.4	
+PA	S1	S01.033	factor VII-activating peptidase	MER0003612	HABP2	3026	10q25.3	
+PA	S1	S01.034	transmembrane peptidase, serine 4	MER0011104	TMPRSS4	56649	11q23.3	
+PA	S1	S01.047	human airway trypsin-like peptidase	MER0003734	TMPRSS11D	9407	4q13.2	
+PA	S1	S01.054	tryptase delta 1 (Homo sapiens)	MER0005948	TPSD1	23430	16p13.3	
+PA	S1	S01.072	matriptase-3	MER0029902	TMPRSS7	344805	3q13	
+PA	S1	S01.074	marapsin	MER0006119	PRSS27	83886	16p13.3	
+PA	S1	S01.075	tryptase-6	MER0006118	PRSS33	260429	16p13.3	
+PA	S1	S01.078	ovochymase-1 domain 1	MER0099182	OVCH1	341350	12p11.23	
+PA	S1	S01.079	transmembrane peptidase, serine 3	MER0005926	TMPRSS3	64699	21q22.3	
+PA	S1	S01.081	kallikrein-related peptidase 15	MER0000064	KLK15	55554	19q13.41	
+PA	S1	S01.085	Mername-AA031 peptidase	MER0014054		136541	7q34	
+PA	S1	S01.087	TMPRSS13 peptidase	MER0014226	TMPRSS13	84000	11q23	
+PA	S1	S01.088	Mername-AA038 peptidase	MER0062848		138652	9q22.31	
+PA	S1	S01.105	Mername-AA204 peptidase	MER0029980				
+PA	S1	S01.127	cationic trypsin (Homo sapiens-type)	MER0000020	PRSS1	5644	7q35	
+PA	S1	S01.131	elastase-2	MER0000118	ELANE	1991	19p13.3	
+PA	S1	S01.132	mannan-binding lectin-associated serine peptidase-3	MER0031968	MASP1	5648	3q27-q28	
+PA	S1	S01.133	cathepsin G	MER0000082	CTSG	1511	14q11.2	
+PA	S1	S01.134	myeloblastin	MER0000170	PRTN3	5657	19p13.3	
+PA	S1	S01.135	granzyme A	MER0001379	GZMA	3001	5q11-q12	
+PA	S1	S01.139	granzyme M	MER0001541	GZMM	3004	19p13.3	
+PA	S1	S01.140	chymase (Homo sapiens-type)	MER0000123	CMA1	1215	14q11.2	
+PA	S1	S01.143	tryptase alpha	MER0000135	TPSAB1	7176	16p13.3	
+PA	S1	S01.146	granzyme K	MER0001936	GZMK	3003	5q11-q12	
+PA	S1	S01.147	granzyme H	MER0000166	GZMH	2999	14q11.2	
+PA	S1	S01.152	chymotrypsin B	MER0000001	CTRB1	1504	16q23.2-q23.3	
+PA	S1	S01.153	elastase-1	MER0003733	CELA1	1990	12q13	
+PA	S1	S01.154	pancreatic endopeptidase E	MER0000149	CELA3A	10136	1p36.12	
+PA	S1	S01.155	pancreatic elastase II	MER0000146	CELA2A	63036	1p36.21	
+PA	S1	S01.156	enteropeptidase	MER0002068	TMPRSS15	5651	21q21	
+PA	S1	S01.157	chymotrypsin C	MER0000761	CTRC	11330	1p36.21	
+PA	S1	S01.159	prostasin	MER0002460	PRSS8	5652	16p11.2	
+PA	S1	S01.160	kallikrein 1	MER0000093	KLK1	3816	19q13.2-q13.4	
+PA	S1	S01.161	kallikrein-related peptidase 2	MER0000094	KLK2	3817	19q13.2-q13.4	
+PA	S1	S01.162	kallikrein-related peptidase 3	MER0000115	KLK3	354	19q13.3-q13.4	
+PA	S1	S01.174	mesotrypsin	MER0000022	PRSS3	5646	9p13	
+PA	S1	S01.189	complement component C1r-like peptidase	MER0016352	C1RL	51279	12p13.31	
+PA	S1	S01.191	complement factor D	MER0000130	CFD	1675	19	
+PA	S1	S01.192	complement component activated C1r	MER0000238	C1R	715	12p13	
+PA	S1	S01.193	complement component activated C1s	MER0000239	C1S	716	12p13	
+PA	S1	S01.194	complement component C2a	MER0000231	C2	717	6p21.3	
+PA	S1	S01.196	complement factor Bb	MER0000229	CFB	629	6p21.3	
+PA	S1	S01.198	mannan-binding lectin-associated serine peptidase 1	MER0000244	MASP1	5648	3q27-q28	
+PA	S1	S01.199	complement factor I	MER0000228	CFI	3426	4q24-q25	
+PA	S1	S01.205	pancreatic endopeptidase E form B	MER0000150	CELA3B	23436	1p36.12	
+PA	S1	S01.206	pancreatic elastase IIB	MER0000147	CELA2B	51032	12q13	
+PA	S1	S01.211	coagulation factor XIIa	MER0000187	F12	2161	5q33-qter	
+PA	S1	S01.212	plasma kallikrein	MER0000203	KLKB1	3818	4q35	
+PA	S1	S01.213	coagulation factor XIa	MER0000210	F11	2160	4q35	
+PA	S1	S01.214	coagulation factor IXa	MER0000216	F9	2158	Xq27.1-q27.2	
+PA	S1	S01.215	coagulation factor VIIa	MER0000215	F7	2155	13q34	
+PA	S1	S01.216	coagulation factor Xa	MER0000212	F10	2159	13q34	
+PA	S1	S01.217	thrombin	MER0000188	F2	2147	11p11-q12	
+PA	S1	S01.218	protein C (activated)	MER0000222	PROC	5624	2q13-q14	
+PA	S1	S01.223	acrosin	MER0000078	ACR	49	22q13-qter	
+PA	S1	S01.224	hepsin	MER0000156	HPN	3249	19q11-q13.2	
+PA	S1	S01.228	hepatocyte growth factor activator	MER0000186	HGFAC	3083	4p16	
+PA	S1	S01.229	mannan-binding lectin-associated serine peptidase 2	MER0002758	MASP2	10747	1p36.3-p36.2	
+PA	S1	S01.231	urokinase-type plasminogen activator	MER0000195	PLAU	5328	10q24	
+PA	S1	S01.232	t-plasminogen activator	MER0000192	PLAT	5327	8p12	
+PA	S1	S01.233	plasmin	MER0000175	PLG	5340	6q26	
+PA	S1	S01.236	kallikrein-related peptidase 6	MER0002580	KLK6	5653	19q13.3-q13.4	
+PA	S1	S01.237	neurotrypsin	MER0004171	PRSS12	8492	4q25-q26	
+PA	S1	S01.244	kallikrein-related peptidase 8	MER0005400	KLK8	11202	19q13.3-q13.4	
+PA	S1	S01.246	kallikrein-related peptidase 10	MER0003645	KLK10	5655	19q13.33	
+PA	S1	S01.247	epitheliasin	MER0003736	TMPRSS2	7113	21q22.3	
+PA	S1	S01.251	kallikrein-related peptidase 4	MER0005266	KLK4	9622	19q13.3-q13.4	
+PA	S1	S01.252	prosemin	MER0004214	PRSS22	64063	16p13.3	
+PA	S1	S01.256	chymopasin	MER0001503	CTRL	1506	16q22.1	
+PA	S1	S01.257	kallikrein-related peptidase 11	MER0004861	KLK11	11012	19q13.3-q13.4	
+PA	S1	S01.258	trypsin-2 type A	MER0000021	PRSS2	5645	7q35	
+PA	S1	S01.277	HtrA1 peptidase (Homo sapiens-type)	MER0002577	HTRA1	5654	10q25.3-q26.2	
+PA	S1	S01.278	HtrA2 peptidase	MER0004093	HTRA2	27429	2p12	
+PA	S1	S01.284	HtrA3 peptidase	MER0014795	HTRA3	94031	4p16.1	
+PA	S1	S01.285	HtrA4 peptidase	MER0016351	HTRA4	203100	8p11.23	
+PA	S1	S01.286	Tysnd1 peptidase	MER0050461	TYSND1	219743	10q22.1	
+PA	S1	S01.291	TMPRSS12 peptidase	MER0017085	TMPRSS12	283471	12q13.13	
+PA	S1	S01.292	HAT-like putative peptidase 2	MER0021884	TMPRSS11A	339967	4q13.3	
+PA	S1	S01.298	trypsin C	MER0021898		154754	7q34	
+PA	S1	S01.299	PRSS55 g.p. (Homo sapiens)	MER0021930	PRSS55	203074	8p23.1	
+PA	S1	S01.300	kallikrein-related peptidase 7	MER0002001	KLK7	5650	19q13.3-q13.4	
+PA	S1	S01.302	matriptase	MER0003735	ST14	6768	11q24-q25	
+PA	S1	S01.306	kallikrein-related peptidase 13	MER0005269	KLK13	26085	19q19.3-q19.4	
+PA	S1	S01.307	kallikrein-related peptidase 9	MER0005270	KLK9	23579	19q19.3-q19.4	
+PA	S1	S01.308	matriptase-2	MER0005278	TMPRSS6	164656	22q13.1	
+PA	S1	S01.309	umbilical vein peptidase	MER0005421	PRSS23	11098	11q14.1	
+PA	S1	S01.311	LCLP peptidase	MER0001900				
+PA	S1	S01.313	spinesin	MER0014385	TMPRSS5	80975	11q23.3	
+PA	S1	S01.318	marapsin-2	MER0021929		339501	1q42.13	
+PA	S1	S01.319	neutrophil serine peptidase 4	MER0056164	PRSS57	400668	19p13.3	
+PA	S1	S01.320	ovochymase-2	MER0022410	OVCH2	341277	11p15.4	
+PA	S1	S01.321	transmembrane peptidase, serine 11F	MER0044589	TMPRSS11F	389208	4q13.2	
+PA	S1	S01.322	ovochymase 1 domain 1	MER0022412	OVCH1	341350	12p11.23	
+PA	S1	S01.325	epidermis-specific SP-like putative peptidase	MER0029900		345062	4q31.3	
+PA	S1	S01.326	testis serine peptidase 5	MER0029901		377047	3p21	
+PA	S1	S01.327	Mername-AA258 peptidase	MER0000285	PRSS41	360226	16p13.3	
+PA	S1	S01.362	testis serine peptidase 2 (human-type)	MER0033187		339906	3p21.31	
+PA	S1	S01.365	TMPRSS11B peptidase	MER0028215	TMPRSS11B	132724	4q13.3	
+PA	S1	S01.374	polyserase-3 unit 1	MER0485226				
+PA	S1	S01.375	polyserase-3 unit 2	MER0061748	PRSS53	339105	16p11.2	
+PA	S1	S01.376	peptidase similar to tryptophan/serine protease	MER0056263		346702	8p23.1	
+PA	S1	S01.394	hypothetical peptidase LOC100287362	MER0216148				
+PA	S1	S01.395	hypothetical peptidase LOC138652	MER0216982				
+PA	S1	S01.414	polyserase-2 unit 1	MER0061777	PRSS36	146547	16p11.2	
+PA	S1	S01.436	HAT-like 2 peptidase	MER0099184				
+PA	S1	S01.487	hCG2041452-like protein	MER0099172	PRSS43	100288960	3p21.31	
+PA	S1	S01.488	hCG22067 putative peptidase	MER0099169				
+PA	S1	S01.514	PRSS56 peptidase	MER0099175	PRSS56	646960	2q37.1	
+PA	S1	S01.530	protein FAM111A	MER1270591				
+PA	S1	S01.531	protein FAM111B	MER1270618				
+PA	S1	S01.933	brain-rescue-factor-1 (Homo sapiens)	MER0098873	MST1P9	11223	1p36.13	
+PA	S1	S01.934	hCG2041108 protein	MER0099173	PRSS44	729756	3p21.31	
+PA	S1	S01.940	polyserase-2 unit 2	MER0061760	PRSS36	146547	16p11.2	
+PA	S1	S01.941	polyserase-2 unit 3	MER0065694	PRSS36	146547	16p11.2	
+PA	S1	S01.957	secreted trypsin-like serine peptidase homologue	MER0030000			4	
+PA	S1	S01.969	polyserase-1A unit 3	MER0029880	TMPRSS9	360200	19p13.3	
+PA	S1	S01.969	polyserase-1A unit 3	MER0030879	TMPRSS9	360200	19p13.3	
+PA	S1	S01.969	polyserase-1A unit 3	MER0030880	TMPRSS9	360200	19p13.3	
+PA	S1	S01.969	polyserase-1A unit 3	MER0016130	PRSS30P	124221	16p13.3	
+PA	S1	S01.971	azurocidin	MER0000119	AZU1	566	19p13.3	
+PA	S1	S01.972	haptoglobin-1	MER0000233	HP	3240	16q22.1	
+PA	S1	S01.974	haptoglobin-related protein	MER0000235	HPR	3250	16q22.1	
+PA	S1	S01.975	macrophage-stimulating protein	MER0001546	MST1	4485	3p21	
+PA	S1	S01.976	hepatocyte growth factor	MER0000185	HGF	3082	7q21.1	
+PA	S1	S01.979	protein Z	MER0000227	PROZ	8858	13q34	
+PA	S1	S01.985	TESP1 protein	MER0047214		646747	2q21.1	
+PA	S1	S01.989	Prss37 protein	MER0016132		136242	7q34	
+PA	S1	S01.992	plasma kallikrein-like protein 4	MER0016346		221191	16q21	
+PA	S1	S01.993	testis-specific protein 50	MER0016347		29122	3p14-p12	
+PA	S1	S01.994	PRSS35 protein	MER0016350	PRSS35	167681	6q15	
+PA	S1	S01.998	PAMR1 g.p. (Homo sapiens)	MER0066474	PAMR1	25891	11p13	
+PA	S1	S01.999	apolipoprotein	MER0000183	LPA	4018	6q27	
+PA	S1	S01.B93	serine protease 44	MER0385517				
+PA	S1	S01.P08	psi-KLK1 pseudogene (Homo sapiens)	MER0033287	KLKP1	606293	19q13.41	
+PA	S1	S01.P09	tryptase pseudogene I	MER0015077			16p13.3	
+PA	S1	S01.P10	tryptase pseudogene II	MER0015078			16p13.3	
+PA	S1	S01.P11	tryptase pseudogene III	MER0015079			16p13.3	
+PA	S1	S01.P19	acrosin pseudogene (Homo sapiens)	MER0033253		284967	2q14.1	
+PA	S1	unassigned	subfamily S1A unassigned peptidases	MER1266981				
+PA	S1	unassigned	subfamily S1A unassigned peptidases	MER0485625				
+PB	C44	C44.001	amidophosphoribosyltransferase precursor	MER0003314	PPAT	5471	4q121	
+PB	C44	C44.970	glutamine-fructose-6-phosphate transaminase 1	MER0003322	GFPT1	2673	2p13	
+PB	C44	C44.972	glutamine:fructose-6-phosphate amidotransferase	MER0012158	GFPT2	9945	5q34-q35	
+PB	C44	C44.973	Mername-AA144 protein	MER0021319		203431	Xq13.3	
+PB	C44	C44.974	asparagine synthetase	MER0033254	ASNS	440	7q21.3	
+PB	C69	C69.003	secernin 1	MER0045376	SCRN1	9805	7p14.3-p14.1	
+PB	C69	C69.004	secernin 2	MER0064573	SCRN2	90507	17q21.32	
+PB	C69	C69.005	secernin 3	MER0064582	SCRN3	79634	2q31.1	
+PB	C89	C89.001	acid ceramidase precursor	MER0100794	ASAH1	427	8p22	
+PB	C89	C89.002	N-acylethanolamine acid amidase precursor	MER0141667	NAAA	27163	4q21.1	
+PB	C95	C95.001	lysosomal 66.3 kDa protein (Mus musculus-type)	MER0174329	PLBD2	196463	12q24.13	
+PB	P2	P02.001	EGF-like module containing mucin-like hormone receptor-like 2	MER0037230	EMR2	30817	19p13.1	
+PB	P2	P02.002	CD97 antigen (human type)	MER0037286	CD97	976	19p13	
+PB	P2	P02.003	EGF-like module containing mucin-like hormone receptor-like 3	MER0037288	EMR3	84658	19p13.1	
+PB	P2	P02.005	EGF-like module containing mucin-like hormone receptor-like 4	MER0037294	EMR4P	326342	19p13.3	
+PB	P2	P02.006	cadherin EGF LAG seven-pass G-type receptor 2 precursor (Homo sapiens)	MER0045397	CELSR2	1952	1p21	
+PB	P2	P02.007	Gpr64 (Mus musculus)-type protein	MER0123205	ADGRG2	10149	Xp22.13	
+PB	P2	P02.008	GPR56 (Homo sapiens)-type protein	MER0122057	ADGRG1	9289	16q21	
+PB	P2	P02.009	latrophilin 2	MER0122199	ADGRL2	23266	1p31.1	
+PB	P2	P02.010	latrophilin-1	MER0126380	LPHN1	22859	19p13.2	
+PB	P2	P02.011	latrophilin 3	MER0124612	LPHN3	23284	4q13.1	
+PB	P2	P02.013	ETL protein	MER0126267	ELTD1	64123	1p33-p32	
+PB	P2	P02.014	G protein-coupled receptor 112	MER0126114	GPR112	139378	Xq26.3	
+PB	P2	P02.015	seven transmembrane helix receptor	MER0125448	GPR144	347088	9q33.3	
+PB	P2	P02.016	Gpr114 protein	MER0159320	GPR114	221188	16q13	
+PB	P2	P02.017	GPR126 vascular inducible G protein-coupled receptor	MER0140015	GPR126	57211	6q24.1	
+PB	P2	P02.018	GPR125 (Homo sapiens)-type protein	MER0159279	ADGRA3	166647	4p15.2	
+PB	P2	P02.019	GPR116 (Homo sapiens)-type G-protein coupled receptor	MER0159280	GPR116	221395	6p12.3	
+PB	P2	P02.020	GPR128 (Homo sapiens)-type G-protein coupled receptor	MER0162015	ADGRG7	84873	3q12.2	
+PB	P2	P02.021	GPR133 (Homo sapiens)-type protein	MER0159334	GPR133	283383	12q24.33	
+PB	P2	P02.022	GPR110 G-protein coupled receptor	MER0159277	GPR110	266977	6p12.3	
+PB	P2	P02.023	GPR97 protein	MER0159322	GPR97	222487	16q13	
+PB	P2	P02.024	KPG_006 protein	MER0161773				
+PB	P2	P02.025	KPG_008 protein	MER0161835				
+PB	P2	P02.026	KPG_009 protein	MER0159335				
+PB	P2	P02.027	brain angiogenesis inhibitor 3	MER0166269	BAI3	577	6q12	
+PB	P2	P02.028	GPR113 protein	MER0159352	GPR113	165082	2p23.3	
+PB	P2	P02.029	brain-specific angiogenesis inhibitor 2	MER0159746	ADGRB2	576	1p35.2	
+PB	P2	P02.036	polycystin-1	MER0126824	PKD1	5310	16p13.3	
+PB	P2	P02.038	KIAA1879 protein	MER0159329	PKD1L2	114780	16q23.2	
+PB	P2	P02.039	polycystic kidney disease 1-like 3	MER0172554	PKD1L3	342372	16q22.2	
+PB	P2	P02.041	adhesion G protein-coupled receptor B1	MER1129192	ADGRB1		8q24.3	
+PB	P2	P02.042	adhesion G protein-coupled receptor F4	MER1128813	ADGRF4		6p12.3	
+PB	T1	T01.010	proteasome subunit beta1c	MER0000556	PSMB6	5694	17p13	
+PB	T1	T01.011	proteasome subunit beta2c	MER0002625	PSMB7	5695	9q34.11-q34.12	
+PB	T1	T01.012	proteasome subunit beta5c	MER0002149	PSMB5	5693	14q11.2	
+PB	T1	T01.013	proteasome subunit beta1i	MER0000552	PSMB9	5698	6p21.3	
+PB	T1	T01.014	proteasome subunit beta2i	MER0001515	PSMB10	5699	16q22.1	
+PB	T1	T01.015	proteasome subunit beta5i	MER0000555	PSMB8	5696	6p21.3	
+PB	T1	T01.016	proteasome subunit beta5t	MER0026203	PSMB11	122706	14q11.2	
+PB	T1	T01.017	protein serine kinase c17	MER0026497				
+PB	T1	T01.020	similar to proteasome subunit beta type 6 (Rattus norvegicus) (but not T01.019)	MER0467091				
+PB	T1	T01.971	proteasome subunit alpha 6	MER0000557	PSMA6	5687	14q13	
+PB	T1	T01.972	proteasome subunit alpha 2	MER0000550	PSMA2	5683	6q27	
+PB	T1	T01.973	proteasome subunit alpha 4	MER0000554	PSMA4	5685	15q11.2	
+PB	T1	T01.974	proteasome subunit alpha 7	MER0004372	PSMA7	5688	20pter-p12.1	
+PB	T1	T01.975	proteasome subunit alpha 5	MER0000558	PSMA5	5686	1p13	
+PB	T1	T01.976	proteasome subunit alpha 1	MER0000549	PSMA1	5682	11p15.1	
+PB	T1	T01.977	proteasome subunit alpha 3	MER0000553	PSMA3	5684	14q23	
+PB	T1	T01.978	2410072d24rik protein (mouse)	MER0033250	PSMA8	143471	18q11.2	
+PB	T1	T01.983	proteasome subunit beta 3	MER0001710	PSMB3	5691	2q35	
+PB	T1	T01.984	proteasome subunit beta 2	MER0002676	PSMB2	5690	1p34.2	
+PB	T1	T01.986	proteasome subunit beta 1	MER0000551	PSMB1	5689	7p12-p13	
+PB	T1	T01.987	proteasome subunit beta 4	MER0001711	PSMB4	5692	1q21	
+PB	T1	T01.991	Mername-AA230 peptidase homologue (Homo sapiens)	MER0047329			2q33	
+PB	T1	T01.P02	Mername-AA231 pseudogene (Homo sapiens)	MER0047172	PSMB3P	121131	12q13.2	
+PB	T1	T01.P03	Mername-AA232 pseudogene (Homo sapiens)	MER0047316	PSMB3P2	130700	2q35	
+PB	T2	T02.001	glycosylasparaginase precursor	MER0003299	AGA	175	4q23-q27	
+PB	T2	T02.002	isoaspartyl dipeptidase (threonine type)	MER0031622	ASRGL1	80150	11q12.3	
+PB	T2	T02.004	taspase-1	MER0016969	TASP1	55617	20p12.1	
+PB	T3	T03.002	gamma-glutamyltransferase 5 (mammalian-type)	MER0001977	GGT5	2687	22q11.23	
+PB	T3	T03.006	gamma-glutamyltransferase 1 (mammalian-type)	MER0001629	GGT1	2678	22q11.23	
+PB	T3	T03.015	gamma-glutamyltransferase 2 (Homo sapiens)	MER0001976	GGT2	2679	22q11.23	
+PB	T3	T03.016	gamma-glutamyltransferase-like protein 4	MER0002721	GGTLC2	91227	22q11.21	
+PB	T3	T03.017	gamma-glutamyltransferase-like protein 3	MER0016970	GGT7	2686	20q11.22	
+PB	T3	T03.018	protein similar to gamma-glutamyltransferase 1 precursor	MER0026204		220522	22q11.21	
+PB	T3	T03.019	similar to gamma-glutamyltransferase 1 precursor (Homo sapiens)	MER0026205		728226	22q11.21	
+PB	T3	T03.021	Mername-AA211 putative peptidase	MER0026207		257456	22	
+PB	T3	T03.024	gamma-glutamyltransferase 6	MER0159283	GGT6	124975	17p13.2	
+PB	T3	T03.971	gamma-glutamyl transpeptidase homologue (chromosome 2, Homo sapiens) and similar	MER0037241			2p11.1	
+PC	C26	C26.001	gamma-glutamyl hydrolase	MER0002963	GGH	8836	8q12.23-q13.1	
+PC	C26	C26.950	guanine 5'-monophosphate synthetase	MER0043387	GMPS	8833	3q25.31	
+PC	C26	C26.951	carbamoyl-phosphate synthase (Homo sapiens-type)	MER0078640	CPS1	1373	2q34	
+PC	C26	C26.952	dihydro-orotase (N-terminal unit) (Homo sapiens-type)	MER0060647	CAD	790	2p23.3	
+PC	C26	C26.964	CTP synthetase	MER0452150				
+PC	C26	C26.966	CTP synthase 2	MER0436754				
+PC	C26	C26.A36	ctps g.p. (Brachydanio rerio)	MER0436775	CTPS1		1p34.2	
+PC	C56	C56.002	DJ-1 putative peptidase	MER0003390	PARK7	11315	1p36.2-p36.3	
+PC	C56	C56.003	Mername-AA100 putative peptidase	MER0014802			12q13	
+PC	C56	C56.971	Mername-AA101 non-peptidase homologue	MER0014803			9q22.32	
+PC	C56	C56.972	phosphoribosylformylglycinamidine synthase	MER0042827	PFAS	5198	17p13.1	
+PC	C56	C56.974	Mername-AA296 non-peptidase homologue	MER0044553	PDDC1	347862	11p15.5	
+PC	C56	C56.975	ES1 protein homolog, mitochondrial	MER0160094	C21orf33	8209	21q22.3	
+PD	C46	C46.002	Sonic hedgehog protein	MER0002539	SHH	6469	7q36	
+PD	C46	C46.003	Indian hedgehog protein	MER0002538	IHH	3549	2	
+PD	C46	C46.004	Desert hedgehog protein	MER0012170	DHH	50846	12q12-13.1	
+S-	S68	S68.001	PIDD auto-processing protein unit 1	MER0020001	PIDD1	55367	11p15.5	
+S-	S68	S68.002	PIDD auto-processing protein unit 2	MER0063690	PIDD1	55367	11p15.5	
+S-	S71	S71.001	MUC1 self-cleaving mucin	MER0074260	MUC1	4582	1q22	
+S-	S71	S71.002	MUC3 self-cleaving mucin	MER0063845	MUC3B	57876	7q22	
+S-	S72	S72.001	dystroglycan	MER0054741	DAG1	1605	3p21	
+S-	S79	S79.001	CARD8 self-cleaving protein	MER0246409	CARD8	22900	19q13.33	
+S-	S79	S79.002	NLRP1 self-cleaving protein	MER0186668	NLRP1	22861	17p13.2	
+SB	S8	S08.039	PCSK9 peptidase	MER0022416	PCSK9	255738	1p32.2	
+SB	S8	S08.063	site-1 peptidase	MER0001948	MBTPS1	8720	16q24	
+SB	S8	S08.071	furin	MER0000375	FURIN	5045	15q25-q26	
+SB	S8	S08.072	PCSK1 peptidase	MER0000376	PCSK1	5122	5q15-q21	
+SB	S8	S08.073	PCSK2 peptidase	MER0000377	PCSK2	5126	20p11.2	
+SB	S8	S08.074	PCSK4 peptidase	MER0028255	PCSK4	54760	19p13.3	
+SB	S8	S08.075	PCSK6 peptidase	MER0000383	PCSK6	5046	15q26	
+SB	S8	S08.076	PCSK5 peptidase	MER0002578	PCSK5	5125	9	
+SB	S8	S08.077	PCSK7 peptidase	MER0002984	PCSK7	9159	11q23-q24	
+SB	S8	S08.A56	SPAP8A3.12c g.p. (Schizosaccharomyces pombe)	MER0000355	TPP2	7174	13q32-q33	
+SB	S53	S53.003	tripeptidyl-peptidase I	MER0003575	TPP1	1200	11p15	
+SC	S9	S09.001	prolyl oligopeptidase	MER0000393	PREP	5550	6q22	
+SC	S9	S09.003	dipeptidyl-peptidase IV (eukaryote)	MER0000401	DPP4	1803	2q23-qter	
+SC	S9	S09.004	acylaminoacyl-peptidase	MER0000408	APEH	327	3p21	
+SC	S9	S09.007	fibroblast activation protein alpha subunit	MER0000399	FAP	2191	2q23	
+SC	S9	S09.015	PREPL A protein	MER0004227	PREPL	9581	2	
+SC	S9	S09.018	dipeptidyl-peptidase 8	MER0013484	DPP8	54878	15q22	
+SC	S9	S09.019	dipeptidyl-peptidase 9	MER0004923	DPP9	91039	19p13.3	
+SC	S9	S09.025	lysophospholipase II (Homo sapiens)	MER0209507	LYPLA2	11313	1p36.11	
+SC	S9	S09.027	predicted hydrolase of the alpha/beta-hydrolase fold (Homo sapiens)	MER0209142	TEX30	93081	13q33.1	
+SC	S9	S09.051	FLJ1 putative peptidase	MER0017240	ABHD13	84945	13q33.3	
+SC	S9	S09.052	Mername-AA194 putative peptidase	MER0017353	FAM108A1	81926	19p13.3	
+SC	S9	S09.053	Mername-AA195 putative peptidase	MER0017367	FAM108C1	58489	15q25.1	
+SC	S9	S09.055	Mername-AA197 putative peptidase	MER0017371	FAM108B1	51104	9q21.12	
+SC	S9	S09.061	C14orf29 protein	MER0033244	ABHD12B	145447	14q22.1	
+SC	S9	S09.062	hypothetical protein	MER0033245	ABHD10	55347	3q13.2	
+SC	S9	S09.065	protein bat5	MER0037840	ABHD16A	7920	6p21.3	
+SC	S9	S09.068	Mername-AA240 putative peptidase (Mus musculus)	MER0047309			3	
+SC	S9	S09.939	lysophosphatidylserine lipase ABHD12	MER0017368	ABHD12	26090	20p11.1	
+SC	S9	S09.941	highly similar to acyl-protein thioesterase 1 (Homo sapiens)	MER0200434				
+SC	S9	S09.942	esterase/lipase (Homo sapiens)	MER0199442	ACOT2	10965	14q24.3	
+SC	S9	S09.943	acyl-CoA thioesterase 4 (Homo sapiens)	MER0200437	ACOT4	122970	14q24.3	
+SC	S9	S09.944	acyl-coenzyme A thioesterase 6 (Homo sapiens)	MER0212825	ACOT6	641372	14q24.3	
+SC	S9	S09.958	hypothetical protein flj40219	MER0033212	CES3	23491	16q22.1	
+SC	S9	S09.959	hypothetical protein flj37464	MER0033240		283848	16q22.1	
+SC	S9	S09.960	hypothetical protein flj33678	MER0033241	CES5A	221223	16q12.2	
+SC	S9	S09.973	dipeptidylpeptidase homologue DPP6	MER0000403	DPP6	1804	7	
+SC	S9	S09.974	dipeptidylpeptidase homologue DPP10	MER0005988	DPP10	57628	2q12.3-2q14.2	
+SC	S9	S09.977	kynurenine formamidase	MER0046020	AFMID	125061	17q25.3	
+SC	S9	S09.978	thyroglobulin precursor	MER0011604	TG	7038	8q24.2-q24.3	
+SC	S9	S09.979	acetylcholinesterase	MER0033188	ACHE	43	7q22	
+SC	S9	S09.980	cholinesterase	MER0033198	BCHE	590	3q26.1-q26.2	
+SC	S9	S09.981	carboxylesterase D1	MER0033213				
+SC	S9	S09.982	liver carboxylesterase	MER0033220	CES1	1066	16q13-q22.1	
+SC	S9	S09.984	carboxylesterase 2	MER0033226	CES2	8824	16q22.1	
+SC	S9	S09.985	bile salt-dependent lipase	MER0033227	CEL	1056	9q34.3	
+SC	S9	S09.986	carboxylesterase-related protein	MER0033231	CES1P1	51716	16q13	
+SC	S9	S09.987	neuroligin 3	MER0033232	NLGN3	54413	Xq13.1	
+SC	S9	S09.988	neuroligin 4, X-linked	MER0033235	NLGN4X	57502	Xp22.33	
+SC	S9	S09.989	neuroligin 4, Y-linked	MER0033236	NLGN4Y	22829	Yq11.221	
+SC	S9	S09.990	esterase D	MER0043126	ESD	2098	13q14.1-q14.2	
+SC	S9	S09.991	arylacetamide deacetylase	MER0033237	AADAC	13	3q21.3-q25.2	
+SC	S9	S09.992	KIAA1363-like protein	MER0033242	NCEH1	57552	3q26.31	
+SC	S9	S09.993	hormone-sensitive lipase	MER0033274	LIPE	3991	19q13.2	
+SC	S9	S09.994	neuroligin 1	MER0033280	NLGN1	22871	3q26.32	
+SC	S9	S09.995	neuroligin 2	MER0033283	NLGN2	57555	17p13.2	
+SC	S9	S09.A49	acyl-coenzyme A:N-acyltransferase 1	MER0211490				
+SC	S9	S09.A50	acyl-coenzyme A amino acid N-acyltransferase 2	MER0250387	BAAT	570	9q22.3	
+SC	S9	S09.B13	hCG1647005	MER0037845	ABHD16B	140701	20q13.33	
+SC	S10	S10.002	serine carboxypeptidase A	MER0000430	CTSA	5476	20q13.1	
+SC	S10	S10.003	vitellogenic carboxypeptidase-like protein	MER0005492	CPVL	54504	7p14-p15.3	
+SC	S10	S10.013	SCPEP1 peptidase	MER0010960	SCPEP1	59342	17	
+SC	S28	S28.001	lysosomal Pro-Xaa carboxypeptidase	MER0000446	PRCP	5547	11q14	
+SC	S28	S28.002	dipeptidyl-peptidase II	MER0004952	DPP7	29952	9q34.3	
+SC	S28	S28.003	thymus-specific serine peptidase	MER0005538	PRSS16	10279	6p21.31-p22.2	
+SC	S33	S33.011	epoxide hydrolase-like putative peptidase	MER0031614	ABHD8	79575	19p13.12	
+SC	S33	S33.012	Loc328574-like protein	MER0033246	SERHL	253190	22q13.2-q13.31	
+SC	S33	S33.013	abhydrolase domain-containing protein 4	MER0031616	ABHD4	63874	14q11.2	
+SC	S33	S33.017	PLN02872 protein (Homo sapiens-type)	MER0210441	LIPA	3988	10q23.2-q23.3	
+SC	S33	S33.018	LIPF protein (Homo sapiens)	MER0210932	LIPF	8513	10q23.31	
+SC	S33	S33.019	COG0429 protein (Homo sapiens)	MER0214074	ABHD2	11057	15q26.1	
+SC	S33	S33.020	LIPJ protein (Homo sapiens)	MER0210302	LIPJ	142910	10q23.31	
+SC	S33	S33.971	epoxide hydrolase	MER0000432	EPHX1	2052	1q42.1	
+SC	S33	S33.972	mesoderm specific transcript protein	MER0017123	MEST	4232	7q32	
+SC	S33	S33.973	cytosolic epoxide hydrolase	MER0029997	EPHX2	2053	8p21-p12	
+SC	S33	S33.974	similar to hypothetical protein FLJ22408	MER0031608	EPHX4	253152	1p22.1	
+SC	S33	S33.975	1-acylglycerol-3-phosphate O-acyltransferase ABHD5	MER0030163	ABHD5	51099	3p25.3-p24.3	
+SC	S33	S33.976	Williams-Beuren syndrome critical region protein 21 epoxide hydrolase	MER0031610	ABHD11	83451	7q11.23	
+SC	S33	S33.978	hypothetical protein flj22408 (epoxide hydrolase)	MER0031617	EPHX3	79852	19p13.13	
+SC	S33	S33.979	monoglyceride lipase	MER0033247	MGLL	11343	3q21.3	
+SC	S33	S33.981	hypothetical protein	MER0033249	ABHD14A	25864	3p21.1	
+SC	S33	S33.982	valacyclovir hydrolase	MER0033259	BPHL	670	6p25	
+SC	S33	S33.983	Ccg1-interacting factor b	MER0033263	ABHD14B	84836	3p21.31	
+SC	S33	S33.984	protein phosphatase methylesterase 1	MER0037853	PPME1	51400	11q13.4	
+SC	S33	S33.986	NDRG4 protein	MER0042913	NDRG4	65009	16q21-q22.1	
+SC	S33	S33.987	NDRG3 protein	MER0042914	NDRG3	57446	20q11.21-q11.23	
+SC	S33	S33.988	Mername-AA229 peptidase homologue	MER0045809	NDRG1	10397	8q24.3	
+SC	S33	S33.989	protein NDRG2-type non-peptidase homologue	MER0201165	NDRG2	57447	14q11.2	
+SC	S33	S33.997	monoacylglycerol lipase ABHD6	MER0031612	ABHD6	57406	3p21.2	
+SE	S12	S12.004	LACT-1 peptidase	MER0017071	LACTB	114294	15q22.1	
+SE	S12	S12.012	AmpH protein (Escherichia-type)	MER0420775				
+SF	S26	S26.002	mitochondrial inner membrane peptidase 1	MER0013949	IMMP1L	196294	11p13	
+SF	S26	S26.009	signalase (animal) 18 kDa component	MER0005386	SEC11A	23478	15q25.2	
+SF	S26	S26.010	signalase (animal) 21 kDa component	MER0014880	SEC11C	90701	18q21.31	
+SF	S26	S26.022	Mername-AA228 putative signal peptidase	MER0047379			8	
+SF	S26	S26.A09	CG11110 protein (Drosophila melanogaster)	MER0014877	IMMP2L	83943	7q31	
+SH	S21	S21.A01	protease/assembly protein gene U53	MER1327996				
+SJ	S16	S16.002	PIM1 peptidase	MER0000495	LONP1	9361	19p13.2	
+SJ	S16	S16.006	psLon peptidase	MER0014970	LONP2	83752	16q12.1	
+SK	S14	S14.003	peptidase Clp (type 3)	MER0002211	CLPP	8192	19	
+SK	S41	S41.950	interphotoreceptor retinoid-binding protein unit 1	MER0030235	RBP3	5949	10q11.22	
+SK	S41	S41.951	interphotoreceptor retinoid-binding protein unit 2	MER0059675	RBP3	5949	10q11.22	
+SK	S41	S41.956	MAGUK p55 subfamily member	MER1051667	MPP4		2q33.1	
+SO	S74	S74.003	myelin regulatory factor	MER1365529				
+SP	S59	S59.001	nucleoporin 145	MER0020203	NUP98	4928	11p15.5	
+SP	S59	S59.951	nup 36 protein	MER0020219				
+SR	S60	S60.001	lactoferrin	MER0020365	LTF	4057	3q21-q23	
+SR	S60	S60.970	lactotransferrin precursor, domain 2	MER0037758	LTF	4057	3q21-q23	
+SR	S60	S60.972	serotransferrin precursor (domain 1)	MER0033288	TF	7018	3q22.1	
+SR	S60	S60.973	melanotransferrin domain 1	MER0033291	MFI2	4241	3q28-q29	
+SR	S60	S60.974	Aa2-001 protein (Rattus norvegicus)	MER0232981				
+SR	S60	S60.975	serotransferrin precursor (domain 2)	MER0037088	TF	7018	3q22.1	
+SR	S60	S60.976	melanotransferrin domain 2	MER0037142	MFI2	4241	3q28-q29	
+SR	S60	S60.977	1300017J02Rik protein	MER0237931				
+ST	S54	S54.002	rhomboid-like protein 2	MER0015453	RHBDL2	54933	1p35.1	
+ST	S54	S54.005	rhomboid-like protein 1	MER0015454	RHBDL1	9028	16p13.3	
+ST	S54	S54.006	rhomboid like 3 peptidase (Homo sapiens)	MER0020285	RHBDL4~withdrawn	162494	17q11.2	
+ST	S54	S54.008	rhomboid-like protein 5	MER0030173	RHBDD1	84236	2q36.3	
+ST	S54	S54.009	PARL peptidase	MER0030047	PARL	55486	3q27.3	
+ST	S54	S54.951	RHBDD3 g.p. (Homo sapiens)	MER0048228	RHBDD3		22q12.2	
+ST	S54	S54.952	iRhom1	MER0004528	RHBDF1	64285	16pter-p13	
+ST	S54	S54.953	iRhom2	MER0002969	RHBDF2	79651	17q25.3	
+ST	S54	S54.955	rhomboid domain containing 2	MER0031620	RHBDD2	57414	7q11.23	
+>>>>>>> 5b0e7cfe792d0a673fd47a2ddcedd7d5ec81990b

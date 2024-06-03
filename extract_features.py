@@ -1,3 +1,5 @@
+# This file is used to extract all data features
+# import packages
 import pandas as pd
 import numpy as np
 from scipy.sparse import coo_matrix, save_npz, load_npz
@@ -32,21 +34,22 @@ amino_acid_index = {
 }
 
 
-# 存储和读取稀疏矩阵
+# Functions for dealing with sparse matrices
 def save_sparse_matrix(mat: pd.DataFrame, path: str) -> None:
-    # 将pd.Dataframe保存为.npz文件
+    # save sparse matrix to given file path
     mat = coo_matrix(mat.values)
     save_npz(path, mat)
 
 
 def load_sparse_matrix(path: str) -> pd.DataFrame:
-    # 读取.npz文件并转换为pd.DataFrame
+    # load sparse matrix from given file path
     mat = load_npz(path).toarray()
     return pd.DataFrame(mat)
 
 
 # extract BINARY
 def extract_binary_features(peptides: pd.Series) -> pd.DataFrame:
+    # extract binary features from peptides
     binary_encoded = []
 
     for i, peptide in tqdm(enumerate(peptides), desc='Extracting binary features'):
@@ -61,13 +64,12 @@ def extract_binary_features(peptides: pd.Series) -> pd.DataFrame:
 
     binary_df = pd.DataFrame(binary)
     binary_df.insert(0, None, peptides)
-
-    # 检查index是否正确，这里不用检查
     return binary_df
 
 
 # extract cksaap
 def cksaap(sequence: list, k: int):
+    # calculate cksaap features
     sequence_len = len(sequence)
     encoded = np.zeros((400,))
     for i in range(sequence_len - k):
@@ -80,6 +82,7 @@ def cksaap(sequence: list, k: int):
 
 
 def extract_cksaap_features(peptides: pd.Series) -> pd.DataFrame:
+    # extract cksaap features from peptide sequences
     cksaap_encode = np.zeros((len(peptides), 2400))
     for i, peptide in tqdm(enumerate(peptides), desc='Extracting cksaap features'):
         peptide = list(peptide)
@@ -90,51 +93,49 @@ def extract_cksaap_features(peptides: pd.Series) -> pd.DataFrame:
 
     cksaap_df = pd.DataFrame(cksaap_encode)
     cksaap_df.insert(0, None, peptides)
-
-    # 检查index是否正确，这里不用检查
     return cksaap_df
 
 
-# 提取AAC特征
+# extract AAC features
 def extract_aac_features(peptides: pd.Series) -> pd.DataFrame:
+    # extract aac features from peptide sequences
     aac_mat = []
     for i, peptide in enumerate(peptides):
         peptide_aac = [0] * 20
         amino_count = Counter(peptide)
         for amino in amino_count:
             amino_id = amino_acid_index[amino]
-            peptide_aac[amino_id] = amino_count[amino] / len(peptide)  # 计算每个氨基酸出现的频率
+            peptide_aac[amino_id] = amino_count[amino] / len(peptide)  # calculate the frequency of each amino acid
         aac_mat.append(peptide_aac)
     aac_df = pd.DataFrame(aac_mat)
     return aac_df
 
 
-# 读取所有特征
 def load_features() -> pd.DataFrame:
-    # 一次性加载所有特征，返回DataFrame
+    # load all the features at one time
     peptides = pd.read_csv("./Cache/peptides.csv", header=None)
     binary = load_sparse_matrix("./Cache/binary.npz")
     cksaap = load_sparse_matrix("./Cache/cksaap.npz")
     aac = load_sparse_matrix("./Cache/aac.npz")
     knn = []
-    for i in list(range(1, 4)) + list(range(7, 18)) + [19, 20, 24, 25]:  # 加载所有的knn特征
+    for i in list(range(1, 4)) + list(range(7, 18)) + [19, 20, 24, 25]:  # load all KNN features
         mmp_knn = np.load("./Data/MMP{}_no_repeat.npy".format(i))
         knn.append(pd.DataFrame(mmp_knn))
     knn = pd.concat(knn, axis=1)
 
-    features = pd.concat([peptides, binary, cksaap, aac, knn], axis=1)  # 仅使用部分特征
+    features = pd.concat([peptides, binary, cksaap, aac, knn], axis=1)
     return features
 
 
-# 读取所有特征
 def load_features_by_name(features_name: tuple) -> pd.DataFrame:
-    # 一次性加载所有特征，返回DataFrame
+    # load the specified features.
+    # the input features_name is a tuple, e.g. ["binary", "cksaap"]
     peptides = pd.read_csv("./Cache/peptides.csv", header=None)
     binary = load_sparse_matrix("./Cache/binary.npz")
     cksaap = load_sparse_matrix("./Cache/cksaap.npz")
     aac = load_sparse_matrix("./Cache/aac.npz")
     knn = []
-    for i in list(range(1, 4)) + list(range(7, 18)) + [19, 20, 24, 25]:  # 加载所有的knn特征
+    for i in list(range(1, 4)) + list(range(7, 18)) + [19, 20, 24, 25]:  # load all KNN features
         mmp_knn = np.load("./Data/MMP{}_no_repeat.npy".format(i))
         knn.append(pd.DataFrame(mmp_knn))
     knn = pd.concat(knn, axis=1)
@@ -148,35 +149,36 @@ def load_features_by_name(features_name: tuple) -> pd.DataFrame:
         selected_features.append(aac)
     if "knn" in features_name:
         selected_features.append(knn)
-    features = pd.concat(selected_features, axis=1)  # 仅使用部分特征
+    features = pd.concat(selected_features, axis=1)  # only use the specified features
     return features
 
 
-# 读取所有待预测数据的特征
+# load features (merops dataset)
 def load_pred_features(mmp: int) -> pd.DataFrame:
-    # 一次性加载所有特征，返回DataFrame
-    mmp_peptides = pd.read_csv("./MMP{}_unique_sequence.csv".format(mmp), header=None).iloc[:, 0]
+    # load all the features at one time
+    mmp_peptides = pd.read_csv("./Data/MMP{}_unique_sequence.csv".format(mmp), header=None).iloc[:, 0]
 
     binary = extract_binary_features(mmp_peptides).iloc[:, 1:]
     cksaap = extract_cksaap_features(mmp_peptides).iloc[:, 1:]
     aac = extract_aac_features(mmp_peptides)
-    knn = []  # 这部分代码没写完
-    for i in list(range(1, 4)) + list(range(7, 18)) + [19, 20, 24, 25]:  # 加载所有的knn特征
+    knn = []
+    for i in list(range(1, 4)) + list(range(7, 18)) + [19, 20, 24, 25]:  # load all KNN features
         mmp_knn = np.load("./Data/knn_MMP{}_MMP{}_prediction.npy".format(mmp, i))
         knn.append(pd.DataFrame(mmp_knn))
     knn = pd.concat(knn, axis=1)
 
-    features = pd.concat([mmp_peptides, binary, cksaap, aac, knn], axis=1)  # 仅使用部分特征
+    features = pd.concat([mmp_peptides, binary, cksaap, aac, knn], axis=1)  # return DataFrame
     return features
 
 
 if __name__ == "__main__":
-    # 处理训练数据
+    # process data
     df = pd.read_excel("./Data/peptides10.xlsx")
-    df.iloc[:, 0] = df.iloc[:, 0].map(lambda x: x.strip()).map(lambda x: x[1:-1])  # 删除首尾的氨基酸和空格
-    df = df.iloc[:, :-1]  # 删除最后一列
+    df.iloc[:, 0] = df.iloc[:, 0].map(lambda x: x.strip()).map(
+        lambda x: x[1:-1])  # delete the first and last amino, because we need to limit the length of peptide to 8
+    df = df.iloc[:, :-1]  # delete the last column
 
-    # 处理重复数据
+    # process duplicated rows
     peptides = df.iloc[:, 0]
     repeat_peptides = [x for x, v in Counter(peptides.values.tolist()).items() if v > 1]
     repeat_peptides = df[df.iloc[:, 0].isin(repeat_peptides)]
@@ -184,39 +186,54 @@ if __name__ == "__main__":
     repeat_peptides = repeat_peptides.reset_index()
     df = df[~df.iloc[:, 0].isin(repeat_peptides.iloc[:, 0])]
     df = pd.concat([df, repeat_peptides], axis=0).reset_index(drop=True)
-    df.to_csv("./Data/processed_peptides10.csv", index=False)  # 保存处理后的数据
+    df.to_csv("./Data/processed_peptides10.csv", index=False)  # save the processed data.
 
-    # 保存peptides列
+    # save peptide sequences
     peptides = df['Unnamed: 0']
     peptides.column = ['Sequence']
     peptides.to_csv('./Cache/peptides.csv', index=False, header=False)
 
-    # 提取binary特征并保存
+    # extract binary features and save
     binary_df = extract_binary_features(peptides)
-    save_sparse_matrix(binary_df.iloc[:, 1:], './Cache/binary.npz')  # 不保存第一列
+    save_sparse_matrix(binary_df.iloc[:, 1:], './Cache/binary.npz')
 
-    # 提取cksaap特征并保存
+    # extract cksaap features and save
     cksaap_df = extract_cksaap_features(peptides)
-    save_sparse_matrix(cksaap_df.iloc[:, 1:], './Cache/cksaap.npz')  # 不保存第一列
+    save_sparse_matrix(cksaap_df.iloc[:, 1:], './Cache/cksaap.npz')
 
-    # 提取AAC特征并保存
+    # extract AAC features and save
     aac_df = extract_aac_features(peptides)
     save_sparse_matrix(aac_df, './Cache/aac.npz')
 
-    # 处理测试数据（并不是训练时用的测试集，而是最后的预测集）
-    pred_df = pd.read_csv("./Cache/to_predict_peptides.csv", header=None)
-    pred_peptides = pred_df.iloc[:, 0]
+    # process merops data
+    data = pd.read_csv("./Data/Protease_Peptides.csv", sep="\t")
+    data = data[(data.iloc[:, 1:] != "-").sum(axis=1) == 8]  # delete the rows including "-"
+    # 38727 rows, the number of unique peptides are 26794
+
+    # map the 3-letter amino acid to 1-letter amino acid
+    amino_3_to_1 = dict()
+    amino_table = pd.read_csv("./Data/amino_table.csv", header=None, sep="\t")
+    for i, x in amino_table.iterrows():
+        amino_3_to_1[x[3].lower()] = x[2]
+    data.iloc[:, 1:] = data.iloc[:, 1:].map(lambda x: amino_3_to_1[x.lower()])
+
+    # save the peptide file
+    pred_peptides = ["".join(x.tolist()) for i, x in data.iloc[:, 1:].iterrows()]
+    pred_peptides = pd.DataFrame(pred_peptides)
+    pred_peptides.to_csv("./Cache/to_predict_peptides.csv", index=False, header=None)
+
+    pred_peptides = pred_peptides.iloc[:, 0]  # only use the first column
     pred_peptides.column = ['Sequence']
     pred_peptides.to_csv('./Cache/pred_peptides.csv', index=False, header=False)
 
-    # 提取binary特征并保存
+    # extract binary features and save (for merops data)
     pred_binary_df = extract_binary_features(pred_peptides)
-    save_sparse_matrix(pred_binary_df.iloc[:, 1:], './Cache/pred_binary.npz')  # 不保存第一列
+    save_sparse_matrix(pred_binary_df.iloc[:, 1:], './Cache/pred_binary.npz')
 
-    # 提取cksaap特征并保存
+    # extract cksaap features and save (for merops data)
     pred_cksaap_df = extract_cksaap_features(pred_peptides)
-    save_sparse_matrix(pred_cksaap_df.iloc[:, 1:], './Cache/pred_cksaap.npz')  # 不保存第一列
+    save_sparse_matrix(pred_cksaap_df.iloc[:, 1:], './Cache/pred_cksaap.npz')
 
-    # 提取AAC特征并保存
+    # extract aac features and save (for merops data)
     pred_aac_df = extract_aac_features(pred_peptides)
     save_sparse_matrix(pred_aac_df, './Cache/pred_aac.npz')
