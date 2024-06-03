@@ -6,7 +6,7 @@
 
 In order to training the model and run the code, you need to install some libraries and packages in advance.
 
-Run this command to install everything
+We recommend you to use Python 3.10. Run this command to install everything
 ```commandline
 pip install -r requirements.txt
 ```
@@ -21,7 +21,7 @@ All blosum scores between every two peptides in the second dataset ```blosum_no_
 After calculation , it will also be saved in ```Data``` folder.
 
 ### search pipeline
-You can just run ```predict_pipeline.py``` to get the final result. The final result will be saved in ```Result/mmp9_search.csv``` and ```Result/mmp9_search.csv```. 
+You can just run ```search_pipeline.py``` to get the final result. The final result will be saved in ```Result/mmp9_search.csv``` and ```Result/mmp9_search.csv```. 
 
 Our results are already in ```Result``` folder, but you can still run again.
 
