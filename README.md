@@ -59,7 +59,7 @@ NFLHLLML,19.0,17.0,15.6,1.88,0.6699999999999999,1.21
 
 ### predict pipeline
 #### models training
-Before intrducing how to train the model by yourself, we provide the model trained by us here. 
+Before intrducing how to train the model by yourself, we provide the models trained by us here. 
 You can just copy them into the same folders and use the model. 
 
 Pre-trained models are [here](https://drive.google.com/file/d/1ymHgLnmE_SwNMVL1Hpq4a9YDuDGolJIT/view?usp=sharing).
