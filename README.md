@@ -6,6 +6,11 @@
 
 In order to training the model and run the code, you need to install some libraries and packages in advance.
 
+Run this command to install everything
+```commandline
+pip install -r requirements.txt
+```
+
 ### pre-analysis
 In our report, we did some analysis before introducing our methods. There are three figures in this section in the report. 
 Run ```pre_analysis.py``` to reproduce these three figures. Results will be saved in folder ```Figures```. 
