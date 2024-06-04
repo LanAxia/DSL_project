@@ -6,11 +6,6 @@
 
 In order to training the model and run the code, you need to install some libraries and packages in advance.
 
-We recommend you to use Python 3.10. Run this command to install everything
-```commandline
-pip install -r requirements.txt
-```
-
 ### pre-analysis
 In our report, we did some analysis before introducing our methods. There are three figures in this section in the report. 
 Run ```pre_analysis.py``` to reproduce these three figures. Results will be saved in folder ```Figures```. 
@@ -21,7 +16,7 @@ All blosum scores between every two peptides in the second dataset ```blosum_no_
 After calculation , it will also be saved in ```Data``` folder.
 
 ### search pipeline
-You can just run ```search_pipeline.py``` to get the final result. The final result will be saved in ```Result/mmp9_search.csv``` and ```Result/mmp9_search.csv```. 
+You can just run ```predict_pipeline.py``` to get the final result. The final result will be saved in ```Result/mmp9_search.csv``` and ```Result/mmp9_search.csv```. 
 
 Our results are already in ```Result``` folder, but you can still run again.
 
@@ -59,49 +54,27 @@ NFLHLLML,19.0,17.0,15.6,1.88,0.6699999999999999,1.21
 
 ### predict pipeline
 #### models training
-Before intrducing how to train the model by yourself, we provide the models trained by us here. 
-You can just copy them into the same folders and use the model. 
 
-Pre-trained models are [here](https://drive.google.com/file/d/1ymHgLnmE_SwNMVL1Hpq4a9YDuDGolJIT/view?usp=sharing).
+To train the model, you can run the ```model_training.py``` to train the deep learning model for final prediction. The model file will be saved in ```Model``` folder.
 
 #### use models trained by us
-To save the time of training the models again, the result from step 1 is already saved in ```Result/pred_mmp3.npy``` and ```Result/pred_mmp3.npy```, for mmp9 and mmp3 respectively.
-You can just run ```predict_pipeline.py``` to get the final result. The final result will be saved in ```Result/mmp9_predict.csv``` and ```Result/mmp9_predict.csv```. 
 
-Our results are already in ```Result``` folder, but you can still run again.
+To save the time of training the models again, the result from step 1 is already saved in ```Result/pred_mmp3.npy``` and ```Result/pred_mmp3.npy```, for mmp9 and mmp3 respectively. You can also use the model files trained by us, which you can find [here](https://drive.google.com/file/d/1ymHgLnmE_SwNMVL1Hpq4a9YDuDGolJIT/view?usp=drive_link).
 
-mmp3 results samples:
+#### use validation files by us
 
-```commandline
-,top1,top5,top10
-SLQACKLA,15.0,14.2,13.3
-RAGTVRRQ,16.0,14.2,13.4
-FKGNQFWA,16.0,14.8,13.9
-QHAPYFKG,16.0,15.2,14.5
-SLGPQVAE,16.0,15.4,15.2
-LLAFVCDI,16.0,15.6,14.9
-VLGHSERR,16.0,15.8,15.1
-SPGAVLRA,16.0,15.8,15.3
-NPNACRAS,16.0,16.0,15.1
-SVAYVSRS,16.0,16.0,15.7
-...
-```
+We also saved all the validation result (prediction and labels) during training the models. Most of validation results are in the ```Result``` folder, while some of them are too large to save in github and we put them [here](https://drive.google.com/file/d/1ymHgLnmE_SwNMVL1Hpq4a9YDuDGolJIT/view?usp=drive_link).(This link is consistent with the one above.)
 
-mmp9 results samples:
+#### running order
 
-```commandline
-,top1,top5,top10
-VLRELRCV,15.0,14.6,14.3
-SCRHLQFI,16.0,14.6,13.6
-FHRKYRIP,16.0,15.4,14.7
-NSYTIKGL,16.0,15.8,15.1
-LGFLQRSS,17.0,16.6,16.0
-VAATPTSL,19.0,16.4,15.5
-LSQVEVIL,19.0,17.4,15.5
-GLGVSAGA,19.0,17.4,16.5
-VATELRCQ,19.0,18.4,16.9
-...
-```
+With all the files we uploaded, you can run any files in any order. The order of manual execution is: 
+
+1. extract_features.py
+2. extract_knn.py
+3.  ml_experiment.ipynb
+4. dl_experiment.py
+5. model_training.py
+6. result_analysis.ipynb
 
 
 ## Files Overview
